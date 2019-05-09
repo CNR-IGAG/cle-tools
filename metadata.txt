@@ -33,7 +33,7 @@ repository=https://github.com/CNR-IGAG/cle-tools
 tags=condizione limite per l'emergenza, emergency limit condition, italy, seismic hazard, pericolosità geologica
 
 
-homepage=https://github.com/CNR-IGAG/mzs-tools/wiki/CLE-Tools
+homepage=https://github.com/CNR-IGAG/cle-tools/wiki
 category=Database
 icon=icon.png
 # experimental flag
