@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>520</width>
-    <height>660</height>
+    <height>740</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,7 +19,7 @@
   <property name="minimumSize">
    <size>
     <width>520</width>
-    <height>660</height>
+    <height>740</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -50,25 +50,15 @@
       <string>Project metadata</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="17" column="1">
-       <widget class="QLineEdit" name="ufficio"/>
-      </item>
-      <item row="15" column="0">
-       <widget class="QLabel" name="label_16">
-        <property name="text">
-         <string>&lt;b&gt;Owner's details&lt;/b&gt;</string>
+      <item row="41" column="1">
+       <widget class="QTextEdit" name="lineage">
+        <property name="toolTip">
+         <string/>
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
-       <widget class="Line" name="line_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="26" column="1">
-       <spacer name="verticalSpacer_21">
+      <item row="16" column="1">
+       <spacer name="verticalSpacer_20">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -80,8 +70,8 @@
         </property>
        </spacer>
       </item>
-      <item row="32" column="1">
-       <spacer name="verticalSpacer_12">
+      <item row="38" column="1">
+       <spacer name="verticalSpacer_8">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -92,26 +82,6 @@
          </size>
         </property>
        </spacer>
-      </item>
-      <item row="15" column="1">
-       <widget class="Line" name="line">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="25" column="0">
-       <widget class="QLabel" name="label_7">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Email (*)</string>
-        </property>
-       </widget>
       </item>
       <item row="5" column="0">
        <widget class="QLabel" name="label_3">
@@ -122,50 +92,12 @@
          </font>
         </property>
         <property name="text">
-         <string>Name and Surname (*)</string>
+         <string>Name </string>
         </property>
        </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_17">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Municipality (*)</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="1">
-       <spacer name="verticalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
       </item>
       <item row="21" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>45</width>
-          <height>0</height>
-         </size>
-        </property>
+       <widget class="QLabel" name="label_7">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -173,7 +105,28 @@
          </font>
         </property>
         <property name="text">
-         <string>Phone</string>
+         <string>Email</string>
+        </property>
+       </widget>
+      </item>
+      <item row="17" column="1">
+       <widget class="QLineEdit" name="propretario">
+        <property name="toolTip">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="25" column="1">
+       <widget class="QLineEdit" name="sito_prop">
+        <property name="toolTip">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QLineEdit" name="sito_prof">
+        <property name="toolTip">
+         <string/>
         </property>
        </widget>
       </item>
@@ -190,33 +143,7 @@
         </property>
        </spacer>
       </item>
-      <item row="14" column="1">
-       <spacer name="verticalSpacer_11">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="2" column="1">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="34" column="1">
+      <item row="36" column="1">
        <spacer name="verticalSpacer_7">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -229,7 +156,27 @@
         </property>
        </spacer>
       </item>
-      <item row="11" column="0">
+      <item row="7" column="1">
+       <widget class="QLineEdit" name="email_prof">
+        <property name="toolTip">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="40" column="1">
+       <spacer name="verticalSpacer_13">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="9" column="0">
        <widget class="QLabel" name="label_14">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -254,20 +201,31 @@
         </property>
        </widget>
       </item>
-      <item row="42" column="1">
-       <spacer name="verticalSpacer_14">
+      <item row="13" column="1">
+       <widget class="Line" name="line">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
+       </widget>
       </item>
-      <item row="22" column="1">
+      <item row="13" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="text">
+         <string>&lt;b&gt;Owner's details&lt;/b&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="33" column="1">
+       <widget class="QLineEdit" name="sito_cont"/>
+      </item>
+      <item row="39" column="1">
+       <widget class="QLineEdit" name="accuratezza">
+        <property name="toolTip">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="30" column="1">
        <spacer name="verticalSpacer_10">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -279,42 +237,6 @@
          </size>
         </property>
        </spacer>
-      </item>
-      <item row="19" column="1">
-       <widget class="QLineEdit" name="propretario">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="18" column="1">
-       <spacer name="verticalSpacer_20">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="33" column="1">
-       <widget class="QDateEdit" name="data_meta">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
       </item>
       <item row="5" column="1">
        <widget class="QLineEdit" name="professionista">
@@ -366,36 +288,11 @@
         </property>
        </widget>
       </item>
-      <item row="35" column="1">
-       <widget class="QLineEdit" name="keyword">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
+      <item row="29" column="1">
+       <widget class="QLineEdit" name="contatto"/>
       </item>
-      <item row="7" column="1">
-       <widget class="QLineEdit" name="tel_prof">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="1">
-       <widget class="QLineEdit" name="email_prof">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="41" column="1">
-       <widget class="QTextEdit" name="lineage">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="33" column="0">
-       <widget class="QLabel" name="label_6">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_17">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -403,12 +300,28 @@
          </font>
         </property>
         <property name="text">
-         <string>Date</string>
+         <string>Municipality</string>
         </property>
        </widget>
       </item>
-      <item row="8" column="1">
-       <spacer name="verticalSpacer_5">
+      <item row="41" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Lineage</string>
+        </property>
+       </widget>
+      </item>
+      <item row="15" column="1">
+       <widget class="QLineEdit" name="ufficio"/>
+      </item>
+      <item row="2" column="1">
+       <spacer name="verticalSpacer">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -420,27 +333,34 @@
         </property>
        </spacer>
       </item>
-      <item row="31" column="1">
-       <widget class="Line" name="line_2">
+      <item row="22" column="1">
+       <spacer name="verticalSpacer_21">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Vertical</enum>
         </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QLabel" name="label_12">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
+        <property name="sizeHint" stdset="0">
          <size>
-          <width>45</width>
-          <height>0</height>
+          <width>20</width>
+          <height>40</height>
          </size>
         </property>
+       </spacer>
+      </item>
+      <item row="8" column="1">
+       <spacer name="verticalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="15" column="0">
+       <widget class="QLabel" name="label_20">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -448,11 +368,64 @@
          </font>
         </property>
         <property name="text">
-         <string>Phone</string>
+         <string>Office</string>
         </property>
        </widget>
       </item>
-      <item row="9" column="0">
+      <item row="32" column="1">
+       <spacer name="verticalSpacer_24">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="35" column="1">
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1">
+       <spacer name="verticalSpacer_11">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="1">
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="31" column="0">
+       <widget class="QLabel" name="label_21">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
        <widget class="QLabel" name="label_13">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -473,12 +446,12 @@
          </font>
         </property>
         <property name="text">
-         <string>Email (*)</string>
+         <string>Email</string>
         </property>
        </widget>
       </item>
-      <item row="10" column="1">
-       <spacer name="verticalSpacer_6">
+      <item row="47" column="1">
+       <spacer name="verticalSpacer_3">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -490,41 +463,31 @@
         </property>
        </spacer>
       </item>
-      <item row="40" column="1">
-       <spacer name="verticalSpacer_13">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="11" column="1">
-       <widget class="QLineEdit" name="sito_prof">
+      <item row="21" column="1">
+       <widget class="QLineEdit" name="email_prop">
         <property name="toolTip">
          <string/>
         </property>
        </widget>
       </item>
-      <item row="35" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
+      <item row="42" column="1">
+       <spacer name="verticalSpacer_14">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
         </property>
-        <property name="text">
-         <string>Keywords</string>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
         </property>
-       </widget>
+       </spacer>
       </item>
-      <item row="43" column="1">
-       <widget class="QLabel" name="label_10">
+      <item row="31" column="1">
+       <widget class="QLineEdit" name="email_cont"/>
+      </item>
+      <item row="33" column="0">
+       <widget class="QLabel" name="label_22">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -532,7 +495,7 @@
          </font>
         </property>
         <property name="text">
-         <string>(*): required fields.</string>
+         <string>Website</string>
         </property>
        </widget>
       </item>
@@ -549,8 +512,46 @@
         </property>
        </widget>
       </item>
-      <item row="20" column="1">
-       <spacer name="verticalSpacer_9">
+      <item row="17" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="43" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Description</string>
+        </property>
+       </widget>
+      </item>
+      <item row="34" column="1">
+       <spacer name="verticalSpacer_25">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -580,68 +581,8 @@
         </item>
        </layout>
       </item>
-      <item row="21" column="1">
-       <widget class="QLineEdit" name="tel_prop">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="39" column="1">
-       <widget class="QLineEdit" name="accuratezza">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="38" column="1">
-       <spacer name="verticalSpacer_8">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="41" column="0">
-       <widget class="QLabel" name="label_9">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Lineage</string>
-        </property>
-       </widget>
-      </item>
-      <item row="30" column="1">
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="29" column="1">
-       <widget class="QLineEdit" name="sito_prop">
-        <property name="toolTip">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="36" column="1">
-       <spacer name="verticalSpacer_3">
+      <item row="28" column="1">
+       <spacer name="verticalSpacer_4">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -677,6 +618,82 @@
         </item>
        </layout>
       </item>
+      <item row="35" column="0">
+       <widget class="QLabel" name="label_19">
+        <property name="text">
+         <string>&lt;b&gt;Other data&lt;/b&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="29" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="1">
+       <spacer name="verticalSpacer_23">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="27" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>&lt;b&gt;Point of Contact&lt;/b&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="25" column="0">
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Website</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_18">
+        <property name="text">
+         <string>&lt;b&gt;Expert data&lt;/b&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="44" column="1">
+       <spacer name="verticalSpacer_12">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="43" column="1">
+       <widget class="QTextEdit" name="descriz"/>
+      </item>
       <item row="4" column="1">
        <spacer name="verticalSpacer_22">
         <property name="orientation">
@@ -690,17 +707,56 @@
         </property>
        </spacer>
       </item>
-      <item row="25" column="1">
-       <widget class="QLineEdit" name="email_prop">
-        <property name="toolTip">
-         <string/>
+      <item row="45" column="0">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>&lt;b&gt;Notice&lt;/b&gt;</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="label_18">
-        <property name="text">
-         <string>&lt;b&gt;Expert data&lt;/b&gt;</string>
+      <item row="6" column="1">
+       <spacer name="verticalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="26" column="1">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="18" column="1">
+       <spacer name="verticalSpacer_9">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="27" column="1">
+       <widget class="Line" name="line_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
@@ -713,19 +769,12 @@
          </font>
         </property>
         <property name="text">
-         <string>Map scale (*)</string>
+         <string>Map scale</string>
         </property>
        </widget>
       </item>
-      <item row="31" column="0">
-       <widget class="QLabel" name="label_19">
-        <property name="text">
-         <string>&lt;b&gt;Other data&lt;/b&gt;</string>
-        </property>
-       </widget>
-      </item>
-      <item row="29" column="0">
-       <widget class="QLabel" name="label">
+      <item row="46" column="1">
+       <widget class="QLabel" name="label_6">
         <property name="font">
          <font>
           <weight>50</weight>
@@ -733,58 +782,14 @@
          </font>
         </property>
         <property name="text">
-         <string>Website</string>
+         <string>All fields are mandatory!</string>
         </property>
        </widget>
       </item>
-      <item row="19" column="0">
-       <widget class="QLabel" name="label_15">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>45</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Name (*)</string>
-        </property>
-       </widget>
-      </item>
-      <item row="16" column="1">
-       <spacer name="verticalSpacer_23">
+      <item row="45" column="1">
+       <widget class="Line" name="line_5">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="17" column="0">
-       <widget class="QLabel" name="label_20">
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Office (*)</string>
+         <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>

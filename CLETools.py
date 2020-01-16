@@ -13,10 +13,9 @@ import os, sys, constants, resources
 from tb_wait import wait
 from tb_aggiorna_progetto import aggiorna_progetto
 from tb_nuovo_progetto import nuovo_progetto
-from tb_importa_shp import importa_shp
+#from tb_importa_shp import importa_shp
 from tb_esporta_shp import esporta_shp
-from tb_report_cle import report_cle
-from tb_valida import valida
+#from tb_report_cle import report_cle
 from tb_info import info
 
 
@@ -42,10 +41,9 @@ class CLETools:
 		self.dlg1 = aggiorna_progetto()
 		self.dlg2 = nuovo_progetto()
 		self.dlg3 = info()
-		self.dlg4 = importa_shp()
+		#self.dlg4 = importa_shp()
 		self.dlg5 = esporta_shp()
-		self.dlg6 = report_cle()
-		self.dlg7 = valida()
+		#self.dlg6 = report_cle()
 
 		self.actions = []
 		self.menu = self.tr(u'&CLE Tools')
@@ -55,11 +53,11 @@ class CLETools:
 		self.dlg2.dir_output.clear()
 		self.dlg2.pushButton_out.clicked.connect(self.select_output_fld_2)
 
-		self.dlg4.dir_input.clear()
-		self.dlg4.pushButton_in.clicked.connect(self.select_input_fld_4)
+		#self.dlg4.dir_input.clear()
+		#self.dlg4.pushButton_in.clicked.connect(self.select_input_fld_4)
 
-		self.dlg4.tab_input.clear()
-		self.dlg4.pushButton_tab.clicked.connect(self.select_tab_fld_4)
+		#self.dlg4.tab_input.clear()
+		#self.dlg4.pushButton_tab.clicked.connect(self.select_tab_fld_4)
 
 		self.dlg5.dir_output.clear()
 		self.dlg5.pushButton_out.clicked.connect(self.select_output_fld_5)
@@ -107,12 +105,11 @@ class CLETools:
 	def initGui(self):
 		icon_path2 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_nuovo_progetto.png'
 		icon_path3 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_info.png'
-		icon_path4 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_importa.png'
+		#icon_path4 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_importa.png'
 		icon_path5 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_esporta.png'
-		icon_path6 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_report_cle.png'
-		icon_path7 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_valida.png'
-		icon_path8 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_edita.png'
-		icon_path9 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_salva_edita.png'
+		#icon_path6 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_report_cle.png'
+		icon_path7 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_edita.png'
+		icon_path8 = self.plugin_dir + os.sep + "img" + os.sep + 'ico_salva_edita.png'
 
 		self.add_action(
 			icon_path2,
@@ -122,11 +119,11 @@ class CLETools:
 
 		self.toolbar.addSeparator()
 
-		self.add_action(
-			icon_path4,
-			text=self.tr(u'Import project folder to geodatabase'),
-			callback=self.run4,
-			parent=self.iface.mainWindow())
+		#self.add_action(
+			#icon_path4,
+			#text=self.tr(u'Import project folder to geodatabase'),
+			#callback=self.run4,
+			#parent=self.iface.mainWindow())
 		self.add_action(
 			icon_path5,
 			text=self.tr(u'Export geodatabase to project folder'),
@@ -136,28 +133,20 @@ class CLETools:
 		self.toolbar.addSeparator()
 
 		self.add_action(
-			icon_path8,
+			icon_path7,
 			text=self.tr(u'Add feature or record'),
-			callback=self.run8,
+			callback=self.run7,
 			parent=self.iface.mainWindow())
 		self.add_action(
-			icon_path9,
+			icon_path8,
 			text=self.tr(u'Save'),
-			callback=self.run9,
+			callback=self.run8,
 			parent=self.iface.mainWindow())
-
-		self.toolbar.addSeparator()
-
 ##		self.add_action(
 ##			icon_path6,
 ##			text=self.tr(u'Report'),
 ##			callback=self.run6,
 ##			parent=self.iface.mainWindow())
-		self.add_action(
-			icon_path7,
-			text=self.tr(u'Validate project'),
-			callback=self.run7,
-			parent=self.iface.mainWindow())
 
 		self.toolbar.addSeparator()
 
@@ -179,13 +168,13 @@ class CLETools:
 		out_dir = QFileDialog.getExistingDirectory(self.dlg2, "","", QFileDialog.ShowDirsOnly)
 		self.dlg2.dir_output.setText(out_dir)
 
-	def select_input_fld_4(self):
-		in_dir = QFileDialog.getExistingDirectory(self.dlg4, "","", QFileDialog.ShowDirsOnly)
-		self.dlg4.dir_input.setText(in_dir)
+	#def select_input_fld_4(self):
+		#in_dir = QFileDialog.getExistingDirectory(self.dlg4, "","", QFileDialog.ShowDirsOnly)
+		#self.dlg4.dir_input.setText(in_dir)
 
-	def select_tab_fld_4(self):
-		tab_dir = QFileDialog.getExistingDirectory(self.dlg4, "","", QFileDialog.ShowDirsOnly)
-		self.dlg4.tab_input.setText(tab_dir)
+	#def select_tab_fld_4(self):
+		#tab_dir = QFileDialog.getExistingDirectory(self.dlg4, "","", QFileDialog.ShowDirsOnly)
+		#self.dlg4.tab_input.setText(tab_dir)
 
 	def select_input_fld_5(self):
 		in_dir = QFileDialog.getExistingDirectory(self.dlg5, "","", QFileDialog.ShowDirsOnly)
@@ -203,7 +192,7 @@ class CLETools:
 			vers_data = (QgsProject.instance().fileName()).split("progetto")[0] + os.sep + "progetto" + os.sep + "version.txt"
 			try:
 				proj_vers = open(vers_data,'r').read()
-				if proj_vers < '0.2':
+				if proj_vers < '0.3':
 					qApp.processEvents()
 					self.dlg1.aggiorna(percorso,dir_output,nome)
 
@@ -222,11 +211,11 @@ class CLETools:
 		self.dlg3.labgis.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-labgis.png'))
 		self.dlg3.help()
 
-	def run4(self):
-		self.dlg4.igag.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-igag.png'))
-		self.dlg4.cnr.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-cnr.png'))
-		self.dlg4.labgis.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-labgis.png'))
-		self.dlg4.importa_prog()
+	#def run4(self):
+		#self.dlg4.igag.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-igag.png'))
+		#self.dlg4.cnr.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-cnr.png'))
+		#self.dlg4.labgis.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-labgis.png'))
+		#self.dlg4.importa_prog()
 
 	def run5(self):
 		self.dlg5.igag.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-igag.png'))
@@ -234,25 +223,20 @@ class CLETools:
 		self.dlg5.labgis.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-labgis.png'))
 		self.dlg5.esporta_prog()
 
-	def run6(self):
-		self.dlg6.igag.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-igag.png'))
-		self.dlg6.cnr.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-cnr.png'))
-		self.dlg6.labgis.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-labgis.png'))
-		self.dlg6.report()
+	#def run6(self):
+		#self.dlg6.igag.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-igag.png'))
+		#self.dlg6.cnr.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-cnr.png'))
+		#self.dlg6.labgis.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-labgis.png'))
+		#self.dlg6.report()
 
 	def run7(self):
-		self.dlg7.igag.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-igag.png'))
-		self.dlg7.cnr.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-cnr.png'))
-		self.dlg7.labgis.setPixmap(QPixmap(self.plugin_dir + os.sep + "img" + os.sep + 'logo-labgis.png'))
-		self.dlg7.controllo()
-
-	def run8(self):
 		proj = QgsProject.instance()
 		proj.writeEntry('Digitizing', 'SnappingMode', 'all_layers')
 		proj.writeEntry('Digitizing','DefaultSnapTolerance', 20.0)
 		DIZIO_LAYER = {"Aree di emergenza":["Aggregati strutturali","Edifici strategici","Unita' strutturali"],
 		"Edifici strategici":["Aree di emergenza","Aggregati strutturali","Unita' strutturali"],
-		"Aggregati strutturali":["Aree di emergenza","Edifici strategici"],"Unita' strutturali":["Aree di emergenza","Edifici strategici"]}
+		"Aggregati strutturali":["Aree di emergenza","Edifici strategici"],
+		"Unita' strutturali":["Aree di emergenza","Edifici strategici"]}
 		POLY_LYR = ["Aree di emergenza", "Aggregati strutturali", "Edifici strategici", "Unita' strutturali"]
 
 		layer = iface.activeLayer()
@@ -279,7 +263,7 @@ class CLETools:
 				layer.startEditing()
 				iface.actionAddFeature().trigger()
 
-	def run9(self):
+	def run8(self):
 		proj = QgsProject.instance()
 		proj.writeEntry('Digitizing', 'SnappingMode', 'all_layers')
 		proj.writeEntry('Digitizing','DefaultSnapTolerance', 20.0)

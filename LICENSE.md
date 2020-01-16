@@ -1,4 +1,4 @@
-CLE Tools * Copyright (c) 2018 Emanuele Tarquini, Gianluca Carbone, Giuseppe Cosentino, Francesco Pennica
+CLE Tools * Copyright (c) 2019 Emanuele Tarquini, Gianluca Carbone, Giuseppe Cosentino, Francesco Pennica
 
 Licensed under the terms of GNU GPL v3.0 (or any layer)
 http://www.gnu.org/copyleft/gpl.html

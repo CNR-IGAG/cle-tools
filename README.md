@@ -11,7 +11,15 @@ Limit Condition for the Emergency studies include the following map:
 The plugin was created to give the opportunity to quickly perform standard compliant Seismic Microzonation studies.
 
 ## Changelog:
-		
+	
+### v0.3:
+
+-  Fixed some bugs related to data entry in the editing windows of the feature classes;
+-  Updated and improved the data entry masks;
+-  Updated the Layout feature classes;
+-  Removed Validation tool;
+-  Corrected the Export tool.
+	
 ### v0.2:
 
 -  initial relase.

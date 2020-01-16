@@ -40,8 +40,8 @@ class aggiorna_progetto(QtGui.QDialog, FORM_CLASS):
 				proj_vers = open(vers_data_2,'r').read()
 				pacchetto = self.plugin_dir + os.sep + "data" + os.sep + "progetto_CLE.zip"
 
-				if proj_vers < '0.2' and new_vers == '0.2':
-					pass
+				if proj_vers < '0.3' and new_vers == '0.3':
+					pass 
 
 			except Exception as z:
 				QMessageBox.critical(None, u'ERROR!', u'Error:\n"' + str(z) + '"')

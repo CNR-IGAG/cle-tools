@@ -8,14 +8,23 @@ qgisMinimumVersion=2.16
 
 description=Plugin for Italian Emergency Limit Condition analysis.
 
-version=0.2
+version=0.3
 author=IGAG-CNR
 email=labgis@igag.cnr.it
 
 
 about=The plugin allows the creation of the database and the cartographic representation of the Emergency Limit Condition analysis according to the standards of representation and computer archiving version 3.1 (Technical Commission for seismic microzonation - art. 5, paragraph 7, OPCM 13 nov. 2010, n. 3907).
+	<b>NOTE:</b> as described in the GPLv3 license, the software provider does not provide any warranty for the program.
+
 	Il plugin consente la creazione della banca dati e la rappresentazione cartografica delle analisi della Condizione Limite per l'Emergenza secondo gli Standard di rappresentazione ed archiviazione informatica versione 3.1 (Commissione tecnica per la microzonazione sismica - art. 5, comma 7 dell’OPCM 13 nov. 2010, n. 3907).
+	<b>NOTA:</b> come descritto all'interno della licenza GPLv3, il fornitore del software non fornisce alcun tipo di garanzia per il programma.
 changelog=
+		v0.3:
+				-  Fixed some bugs related to data entry in the editing windows of the feature classes;
+				-  Updated and improved the data entry masks;
+				-  Updated the Layout feature classes;
+				-  Removed Validation tool;
+				-  Corrected the Export tool.
 		v0.2:
 				-  initial relase.		
 
