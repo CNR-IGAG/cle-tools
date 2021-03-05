@@ -234,8 +234,8 @@ class CLETools:
 		proj.writeEntry('Digitizing', 'SnappingMode', 'all_layers')
 		proj.writeEntry('Digitizing','DefaultSnapTolerance', 20.0)
 		DIZIO_LAYER = {"Aree di emergenza":["Aggregati strutturali","Edifici strategici","Unita' strutturali"],
-		"Edifici strategici":["Aree di emergenza","Aggregati strutturali","Unita' strutturali"],
-		"Aggregati strutturali":["Aree di emergenza","Edifici strategici"],
+		"Edifici strategici":["Aree di emergenza","Unita' strutturali"],
+		"Aggregati strutturali":["Aree di emergenza"],
 		"Unita' strutturali":["Aree di emergenza","Edifici strategici"]}
 		POLY_LYR = ["Aree di emergenza", "Aggregati strutturali", "Edifici strategici", "Unita' strutturali"]
 

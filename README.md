@@ -12,6 +12,12 @@ The plugin was created to give the opportunity to quickly perform standard compl
 
 ## Changelog:
 	
+### v0.4:
+
+-  Fixed some bugs related to data entry in the editing windows of the feature classes;
+-  Updated and improved the data entry masks;
+-  Updated the Layout feature classes.	
+	
 ### v0.3:
 
 -  Fixed some bugs related to data entry in the editing windows of the feature classes;
