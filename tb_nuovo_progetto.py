@@ -104,12 +104,12 @@ class nuovo_progetto(QDialog, FORM_CLASS):
 
         # Sample data for testing purposes
         # TODO: disable
-        if True:
+        if False:
             d = QTemporaryDir()
             d.setAutoRemove(False)
             # self.dir_output.setText(d.path())
             self.dir_output.setText(
-                '/home/ale/Documenti/itopen/progetti/CNR-CLE-Tools/test_projects')
+                '~/Documenti/itopen/progetti/CNR-CLE-Tools/test_projects')
             self.comune.setCurrentText('Luserna San Giovanni')
             self.cod_istat.setText('001139')
             self.professionista.setText('itopen')
