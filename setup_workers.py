@@ -25,11 +25,13 @@ class setup_workers():
         self.iface = iface
         self.plugin_dir = os.path.dirname(__file__)
 
-    def start_worker(self, worker, iface, message, log_file=None):
+    def start_worker(self, worker, iface, message, log_file=None, logfile_path=None):
         ############################################
         # DEBUG ONLY
         # self.import_reset()
         ############################################
+
+        self.logfile_path = logfile_path
 
         # configure the QgsMessageBar
         message_bar_item = iface.messageBar().createMessage(message)
@@ -87,7 +89,7 @@ class setup_workers():
                 log_file.write("\n\nProcess interrupted!")
             iface.messageBar().pushMessage(
                 'Process cancelled.',
-                level=QgsMessageBar.WARNING,
+                level=Qgis.Warning,
                 duration=3)
 
         # clean up the worker and thread
@@ -103,10 +105,10 @@ class setup_workers():
 
         if result is not None:
             QMessageBox.information(iface.mainWindow(), 'INFORMATION!',
-                                    u"Import process completed.\n\nImport report was saved in the project folder '...\\allegati\\log'")
+                                    "Process completed.\n\nReport was saved in the project folder: %s" % self.logfile_path)
         else:
             QMessageBox.critical(iface.mainWindow(), 'ERROR!',
-                                 u"Process interrupted! Read the report saved in the project folder '...\\allegati\\log'")
+                                 "Process interrupted! Read the report saved in the project folder: %s" % self.logfile_path)
 
     def worker_error(self, e, exception_string, iface, log_file=None):
         # notify the user that something went wrong

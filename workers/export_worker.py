@@ -106,10 +106,16 @@ class ExportWorker(AbstractWorker):
         self.set_message.emit('Creating shapefiles:')
         self.set_log_message.emit('\nCreating shapefiles:\n')
 
+        options = QgsVectorFileWriter.SaveVectorOptions()
+        options.driverName = "ESRI Shapefile"
+        options.fileEncoding = "utf-8"
+
         for chiave, valore in POSIZIONE.items():
             sourceLYR = QgsProject.instance().mapLayersByName(chiave)[0]
-            QgsVectorFileWriter.writeAsVectorFormat(
-                sourceLYR, output_name + os.sep + valore[0] + os.sep + valore[1], "utf-8", None, "ESRI Shapefile")
+
+            err, msg = QgsVectorFileWriter.writeAsVectorFormatV2(sourceLYR, os.path.join(
+                output_name, valore[0], valore[1]), QgsProject.instance().transformContext(), options)
+
             selected_layer = QgsVectorLayer(
                 output_name + os.sep + valore[0] + os.sep + valore[1] + ".shp", valore[1], 'ogr')
             if chiave == "Infrastrutture di accessibilita'/connessione" or chiave == "Aree di emergenza" or chiave == "Aggregati strutturali" or chiave == "Edifici strategici" or chiave == "Unita' strutturali":
@@ -186,13 +192,13 @@ class ExportWorker(AbstractWorker):
             for field in selected_layer.fields():
                 if field.name() not in fieldnames:
                     field_ids.append(
-                        selected_layer.fieldNameIndex(field.name()))
+                        selected_layer.fields().lookupField(field.name()))
             selected_layer.dataProvider().deleteAttributes(field_ids)
             selected_layer.updateFields()
         elif list_attr[0] == 1:
             for field in selected_layer.fields():
                 if field.name() in fieldnames:
                     field_ids.append(
-                        selected_layer.fieldNameIndex(field.name()))
+                        selected_layer.fields().lookupField(field.name()))
             selected_layer.dataProvider().deleteAttributes(field_ids)
             selected_layer.updateFields()

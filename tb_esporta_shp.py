@@ -67,7 +67,7 @@ class esporta_shp(QDialog, FORM_CLASS):
 
                     # start export worker
                     setup_workers().start_worker(worker, self.iface,
-                                                 'Starting export task...', log_file)
+                                                 'Starting export task...', log_file, logfile_path)
 
                 else:
                     QMessageBox.warning(

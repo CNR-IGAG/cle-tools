@@ -250,7 +250,7 @@ class CLETools(object):
     def save(self):
 
         proj = QgsProject.instance()
-        POLIGON_LYR = ["Aree di emergenza", "Aggregati strutturali",
+        POLYGON_LYR = ["Aree di emergenza", "Aggregati strutturali",
                        "Edifici strategici", "Unita' strutturali"]
 
         snapping_config = proj.snappingConfig()
@@ -261,7 +261,7 @@ class CLETools(object):
 
         layer = iface.activeLayer()
         if layer != None:
-            if layer.name() in POLIGON_LYR:
+            if layer.name() in POLYGON_LYR:
 
                 self.dlg_wait.show()
                 layers = proj.mapLayers().values()
