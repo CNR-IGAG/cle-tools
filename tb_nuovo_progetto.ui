@@ -725,6 +725,27 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>comune</tabstop>
+  <tabstop>cod_istat</tabstop>
+  <tabstop>professionista</tabstop>
+  <tabstop>email_prof</tabstop>
+  <tabstop>sito_prof</tabstop>
+  <tabstop>ufficio</tabstop>
+  <tabstop>propretario</tabstop>
+  <tabstop>email_prop</tabstop>
+  <tabstop>sito_prop</tabstop>
+  <tabstop>contatto</tabstop>
+  <tabstop>email_cont</tabstop>
+  <tabstop>sito_cont</tabstop>
+  <tabstop>scala_nom</tabstop>
+  <tabstop>accuratezza</tabstop>
+  <tabstop>lineage</tabstop>
+  <tabstop>descriz</tabstop>
+  <tabstop>dir_output</tabstop>
+  <tabstop>pushButton_out</tabstop>
+  <tabstop>help_button</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
