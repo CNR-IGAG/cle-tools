@@ -178,6 +178,7 @@ class nuovo_progetto(QDialog, FORM_CLASS):
 
                     layer_limiti_comunali = QgsProject.instance(
                     ).mapLayersByName("Limiti comunali")[0]
+                    layer_limiti_comunali.setSubsetString('')
                     req = QgsFeatureRequest()
                     req.setFilterExpression('"cod_istat" = \'%s\'' % cod_istat)
                     selection = layer_limiti_comunali.getFeatures(req)
@@ -268,6 +269,7 @@ class nuovo_progetto(QDialog, FORM_CLASS):
                         None, 'INFORMATION!', "The project has been created successfully!")
 
                 except Exception as z:
+                    raise z
                     QMessageBox.critical(
                         None, 'ERROR!', 'Error:\n"' + str(z) + '"')
                     if os.path.exists(dir_out + os.sep + "progetto_MS"):
