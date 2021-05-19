@@ -60,6 +60,8 @@ class CLETools(object):
         self.dlg_export_shp.dir_output.clear()
         self.dlg_export_shp.pushButton_out.clicked.connect(
             self.select_output_fld_5)
+        
+        QgsSettings().setValue("qgis/enableMacros", 3)
 
         self.iface.projectRead.connect(self.run1)
 
