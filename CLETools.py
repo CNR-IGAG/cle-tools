@@ -60,10 +60,10 @@ class CLETools(object):
         self.dlg_export_shp.dir_output.clear()
         self.dlg_export_shp.pushButton_out.clicked.connect(
             self.select_output_fld_5)
-        
+
         QgsSettings().setValue("qgis/enableMacros", 3)
 
-        self.iface.projectRead.connect(self.run1)
+        self.iface.projectRead.connect(self.check_new_version)
 
     def tr(self, message):
         return QCoreApplication.translate('CLETools', message)
@@ -170,22 +170,25 @@ class CLETools(object):
             self.dlg_export_shp, "", "", QFileDialog.ShowDirsOnly)
         self.dlg_export_shp.dir_output.setText(out_dir)
 
-    def run1(self):
+    def check_new_version(self):
         percorso = QgsProject.instance().homePath()
         dir_output = '/'.join(percorso.split('/')[:-1])
         nome = percorso.split('/')[-1]
         if os.path.exists(percorso + os.sep + "progetto"):
-            vers_data = (QgsProject.instance().fileName()).split("progetto")[
-                0] + os.sep + "progetto" + os.sep + "version.txt"
+            vers_data = os.path.join(
+                os.path.dirname(QgsProject.instance().fileName()), "progetto", "version.txt")
             try:
-                proj_vers = open(vers_data, 'r').read()
-                if proj_vers < '0.3':
-                    qApp.processEvents()
-                    self.dlg_project_update.aggiorna(
-                        percorso, dir_output, nome)
+                with open(vers_data, 'r') as f:
+                    proj_vers = f.read()
+                    with open(os.path.join(os.path.dirname(__file__), 'version.txt')) as nf:
+                        new_proj_vers = nf.read()
+                        if proj_vers < new_proj_vers:
+                            qApp.processEvents()
+                            self.dlg_project_update.aggiorna(
+                                percorso, dir_output, nome, proj_vers, new_proj_vers)
 
-            except:
-                pass
+            except Exception as ex:
+                QgsMessageLog.logMessage('Error: %s' % ex, 'CLE Tools')
 
     def new_project(self):
         self.dlg_new_project.nuovo()

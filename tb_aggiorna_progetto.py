@@ -30,26 +30,47 @@ class aggiorna_progetto(QDialog, FORM_CLASS):
 
     def __init__(self, parent=None):
         """Constructor."""
-        super(aggiorna_progetto, self).__init__(parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.plugin_dir = os.path.dirname(__file__)
 
-    def aggiorna(self, dir2, dir_output, nome):
+    def aggiorna(self, dir2, dir_output, nome, proj_vers, new_proj_vers):
         self.show()
         result = self.exec_()
         if result:
-            QgsProject.instance().clear()
-            for c in iface.activeComposers():
-                iface.deleteComposer(c)
             try:
-                vers_data_1 = self.plugin_dir + os.sep + "version.txt"
-                new_vers = open(vers_data_1, 'r').read()
-                vers_data_2 = dir2 + os.sep + "progetto" + os.sep + "version.txt"
-                proj_vers = open(vers_data_2, 'r').read()
-                pacchetto = self.plugin_dir + os.sep + "data" + os.sep + "progetto_CLE.zip"
+                pacchetto = os.path.join(
+                    self.plugin_dir, "data", "progetto_CLE.zip")
 
-                if proj_vers < '0.3' and new_vers == '0.3':
-                    pass
+                if proj_vers < new_proj_vers:
+
+                    name_output = nome + "_backup_v" + proj_vers + "_" + \
+                        datetime.datetime.now().strftime("%Y_%m_%d_%H_%M")
+                    shutil.copytree(dir2, os.path.join(
+                        dir_output, name_output))
+
+                    zip_ref = zipfile.ZipFile(pacchetto, 'r')
+                    zip_ref.extractall(dir2)
+                    zip_ref.close()
+
+                    shutil.rmtree(os.path.join(dir2, "progetto", "maschere"))
+                    shutil.copytree(os.path.join(dir2, "progetto_CLE", "progetto", "maschere"), os.path.join(
+                        dir2, "progetto", "maschere"))
+                    shutil.rmtree(os.path.join(dir2, "progetto", "script"))
+                    shutil.copytree(os.path.join(dir2, "progetto_CLE", "progetto", "script"), os.path.join(
+                        dir2, "progetto", "script"))
+                    os.remove(os.path.join(dir2, "progetto", "version.txt"))
+                    shutil.copyfile(os.path.join(os.path.dirname(__file__), 'version.txt'), os.path.join(
+                        dir2, "progetto", "version.txt"))
+                    os.remove(os.path.join(dir2, "progetto_CLE.qgs"))
+                    shutil.copyfile(os.path.join(
+                        dir2, "progetto_CLE", "progetto_CLE.qgs"), os.path.join(dir2, "progetto_CLE.qgs"))
+
+                    shutil.rmtree(os.path.join(dir2, "progetto_CLE"))
+                    QMessageBox.information(
+                        None, 'INFORMATION!', "The project structure has been updated!\nThe backup copy has been saved in the following directory: " + name_output)
+
+                    QgsProject.instance().read(QgsProject.instance().fileName())
 
             except Exception as z:
                 QMessageBox.critical(
