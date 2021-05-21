@@ -223,7 +223,7 @@ class CLETools(object):
                 for fc in proj.mapLayers().values():
                     if fc.name() in POLY_LYR:
                         layer_settings = QgsSnappingConfig.IndividualLayerSettings(
-                            True, QgsSnappingConfig.Vertex, 20, QgsTolerance.ProjectUnits)
+                            True, QgsSnappingConfig.VertexFlag, 20, QgsTolerance.ProjectUnits)
 
                         snapping_config.setIndividualLayerSettings(
                             fc, layer_settings)
@@ -236,7 +236,7 @@ class CLETools(object):
                             other_layer = QgsProject.instance().mapLayersByName(layer_name)[
                                 0]
                             layer_settings = QgsSnappingConfig.IndividualLayerSettings(
-                                True, QgsSnappingConfig.Vertex, 20, QgsTolerance.ProjectUnits)
+                                True, QgsSnappingConfig.VertexFlag, 20, QgsTolerance.ProjectUnits)
                             snapping_config.setIndividualLayerSettings(
                                 layer, layer_settings)
                             snapping_config.setIndividualLayerSettings(
@@ -274,7 +274,7 @@ class CLETools(object):
                 for fc in layers:
                     if fc.name() in POLYGON_LYR:
                         layer_settings = QgsSnappingConfig.IndividualLayerSettings(
-                            True, QgsSnappingConfig.Vertex, 20, QgsTolerance.ProjectUnits)
+                            True, QgsSnappingConfig.VertexFlag, 20, QgsTolerance.ProjectUnits)
                         snapping_config.setIndividualLayerSettings(
                             fc, layer_settings)
 
