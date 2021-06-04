@@ -70,7 +70,19 @@ class aggiorna_progetto(QDialog, FORM_CLASS):
                     QMessageBox.information(
                         None, 'INFORMATION!', "The project structure has been updated!\nThe backup copy has been saved in the following directory: " + name_output)
 
+                    canvas_extent = iface.mapCanvas().extent()
+
+                    subset_strings = {}
+                    for vl in QgsProject.instance().mapLayers().values():
+                        subset_strings[vl.name()] = vl.subsetString()
+
                     QgsProject.instance().read(QgsProject.instance().fileName())
+
+                    for vl in QgsProject.instance().mapLayers().values():
+                        if subset_strings.get(vl.name(), '') != '':
+                            vl.setSubsetString(subset_strings.get(vl.name()))
+
+                    iface.mapCanvas().setExtent(canvas_extent)
 
             except Exception as z:
                 QMessageBox.critical(
