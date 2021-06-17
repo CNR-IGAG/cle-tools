@@ -102,31 +102,6 @@ class nuovo_progetto(QDialog, FORM_CLASS):
         self.descriz.textChanged.connect(self.disableButton)
         self.dir_output.textChanged.connect(self.disableButton)
 
-        # Sample data for testing purposes
-        # TODO: disable
-        if False:
-            d = QTemporaryDir()
-            d.setAutoRemove(False)
-            # self.dir_output.setText(d.path())
-            self.dir_output.setText(
-                '~/Documenti/itopen/progetti/CNR-CLE-Tools/test_projects')
-            self.comune.setCurrentText('Luserna San Giovanni')
-            self.cod_istat.setText('001139')
-            self.professionista.setText('itopen')
-            self.email_prof.setText('some text')
-            self.sito_prof.setText('some text')
-            self.ufficio.setText('some text')
-            self.propretario.setText('some text')
-            self.email_prop.setText('some text')
-            self.sito_prop.setText('some text')
-            self.contatto.setText('some text')
-            self.email_cont.setText('some text')
-            self.sito_cont.setText('some text')
-            self.scala_nom.setText('50000')
-            self.accuratezza.setText('some text')
-            self.lineage.setText('some text')
-            self.descriz.setText('some text')
-
         self.show()
         result = self.exec_()
         if result:
