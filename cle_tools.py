@@ -5,8 +5,10 @@
 # Created:	 15-01-2019
 # -------------------------------------------------------------------------------
 import os
+import shutil
 
 from qgis.core import (
+    Qgis,
     QgsMessageLog,
     QgsProject,
     QgsSettings,
@@ -62,7 +64,7 @@ class CLETools(object):
 
         QgsSettings().setValue("qgis/enableMacros", 3)
 
-        self.iface.projectRead.connect(self.check_new_version)
+        self.iface.projectRead.connect(self.check_project)
 
     def tr(self, message):
         return QCoreApplication.translate("CLETools", message)
@@ -175,11 +177,36 @@ class CLETools(object):
         )
         self.dlg_export_shp.dir_output.setText(out_dir)
 
-    def check_new_version(self):
+    def check_project(self):
         percorso = QgsProject.instance().homePath()
         dir_output = "/".join(percorso.split("/")[:-1])
         nome = percorso.split("/")[-1]
-        if os.path.exists(percorso + os.sep + "progetto"):
+
+        # detect CLETools project
+        if os.path.exists(os.path.join(percorso, "progetto")) and os.path.exists(
+            os.path.join(percorso, "progetto", "version.txt")
+        ):
+            QgsMessageLog.logMessage("CLETools project detected", "CLETools", Qgis.Info)
+            QgsMessageLog.logMessage("Checking svg symbols...", "CLETools", Qgis.Info)
+
+            dir_svg_input = os.path.join(self.plugin_dir, "img", "svg")
+            dir_svg_output = self.plugin_dir.split("python")[0] + "svg"
+
+            if not os.path.exists(dir_svg_output):
+                QgsMessageLog.logMessage(
+                    f"Copying svg symbols in {dir_svg_output}", "CLETools", Qgis.Info
+                )
+                shutil.copytree(dir_svg_input, dir_svg_output)
+            else:
+                QgsMessageLog.logMessage(
+                    f"Updating svg symbols in {dir_svg_output}", "CLETools", Qgis.Info
+                )
+                src_files = os.listdir(dir_svg_input)
+                for file_name in src_files:
+                    full_file_name = os.path.join(dir_svg_input, file_name)
+                    if os.path.isfile(full_file_name):
+                        shutil.copy(full_file_name, dir_svg_output)
+
             vers_data = os.path.join(
                 os.path.dirname(QgsProject.instance().fileName()),
                 "progetto",
@@ -187,12 +214,15 @@ class CLETools(object):
             )
             try:
                 with open(vers_data, "r") as f:
-                    proj_vers = f.read()
+                    proj_vers = float(f.read())
                     with open(
                         os.path.join(os.path.dirname(__file__), "version.txt")
                     ) as nf:
-                        new_proj_vers = nf.read()
+                        new_proj_vers = float(nf.read())
                         if proj_vers < new_proj_vers:
+                            QgsMessageLog.logMessage(
+                                "Project needs updating!", "CLETools", Qgis.Info
+                            )
                             qApp.processEvents()
                             self.dlg_project_update.aggiorna(
                                 percorso, dir_output, nome, proj_vers, new_proj_vers
