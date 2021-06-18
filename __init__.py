@@ -32,5 +32,5 @@ def classFactory(iface):  # pylint: disable=invalid-name
     :type iface: QgisInterface
     """
     #
-    from .CLETools import CLETools
+    from .cle_tools import CLETools
     return CLETools(iface)
