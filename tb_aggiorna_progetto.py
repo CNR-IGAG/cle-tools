@@ -79,8 +79,10 @@ class aggiorna_progetto(QDialog, FORM_CLASS):
 
                     QMessageBox.information(
                         None,
-                        "INFORMATION!",
-                        "The project structure has been updated!\nThe backup copy has been saved in the following directory: "
+                        self.tr("INFORMATION!"),
+                        self.tr(
+                            "The project structure has been updated!\nThe backup copy has been saved in the following directory: "
+                        )
                         + name_output,
                     )
 
@@ -103,7 +105,7 @@ class aggiorna_progetto(QDialog, FORM_CLASS):
 
     def load_new_qgs_file(self, proj_path):
 
-        QgsMessageLog.logMessage("Loading new project", "MzSTools", level=Qgis.Info)
+        QgsMessageLog.logMessage("Loading new project", "CLETools", level=Qgis.Info)
 
         project = QgsProject.instance()
         project.read(os.path.join(proj_path, "progetto_MS.qgs"))

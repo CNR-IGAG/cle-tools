@@ -241,18 +241,18 @@ class nuovo_progetto(QDialog, FORM_CLASS):
                     # Save the project!
                     project.write(project_path)
                     QMessageBox.information(
-                        None, 'INFORMATION!', "The project has been created successfully!")
+                        None, self.tr('INFORMATION!'), self.tr("The project has been created successfully!"))
 
                 except Exception as z:
-                    raise z
+                    # raise z
                     QMessageBox.critical(
                         None, 'ERROR!', 'Error:\n"' + str(z) + '"')
-                    if os.path.exists(dir_out + os.sep + "progetto_MS"):
-                        shutil.rmtree(dir_out + os.sep + "progetto_MS")
+                    if os.path.exists(os.path.join(dir_out, "progetto_MS")):
+                        shutil.rmtree(os.path.join(dir_out, "progetto_MS"))
 
             else:
                 QMessageBox.warning(
-                    iface.mainWindow(), 'WARNING!', "The selected directory does not exist!")
+                    iface.mainWindow(), self.tr('WARNING!'), self.tr("The selected directory does not exist!"))
 
     def disableButton(self):
         check_campi = [self.professionista.text(), self.email_prof.text(), self.sito_prof.text(), self.propretario.text(), self.ufficio.text(), self.email_prop.text(), self.sito_prop.text(), self.contatto.text(
@@ -320,3 +320,6 @@ class nuovo_progetto(QDialog, FORM_CLASS):
             if letter == "'":
                 word = word.replace(letter, "''")
         return word
+
+    def tr(self, message):
+        return QCoreApplication.translate('nuovo_progetto', message)
