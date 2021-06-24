@@ -346,7 +346,7 @@ def alert_area(dialog):
     if (rett_max.text() != '') and (rett_min.text() != ''):
         if int(rett_min.text()) > int(rett_max.text()):
             QMessageBox.warning(
-                None, 'WARNING!', "The value of the '15 MINIMA' field is greater than the value of the '14 MASSIMA' field!")
+                None, 'WARNING!', "Il valore del campo '15 MINIMA' e\' maggiore del valore del campo '14 MASSIMA'!")
             rett_min.setText('')
             rett_max.setText('')
 
@@ -358,7 +358,7 @@ def alert_area_2(dialog):
     if (rett_max.text() != '') and (rett_min.text() != '') and (superf.text() != ''):
         if int(superf.text()) < int(rett_max.text())*int(rett_min.text()):
             QMessageBox.warning(
-                None, 'WARNING!', "The product of '14 MASSIMA' field for '15 MINIMA' field is higher than the value of the '13 SUPERFICIE DELL''AREA' field!")
+                None, 'WARNING!', "Il prodotto del campo '14 MASSIMA' per il campo '15 MINIMA' e\' maggiore del valore del campo '13 SUPERFICIE DELL''AREA' field!")
             rett_min.setText('')
             rett_max.setText('')
             superf.setText('')

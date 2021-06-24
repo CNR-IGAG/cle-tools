@@ -616,7 +616,7 @@ def alert_data(dialog):
     elif (anno_prog.text() != '') and (anno_cost.text() != ''):
         if int(anno_prog.text()) > int(anno_cost.text()):
             QMessageBox.warning(
-                None, 'WARNING!', "The value of the 'ANNO DI PROGETTAZIONE' field is greater than the value of the 'ANNO DI FINE COSTRUZIONE' field!")
+                None, 'WARNING!', "Il valore del campo 'ANNO DI PROGETTAZIONE' e\' maggiore del valore del campo 'ANNO DI FINE COSTRUZIONE'!")
             anno_prog.setText('')
             anno_cost.setText('')
 

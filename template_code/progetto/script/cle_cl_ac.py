@@ -333,7 +333,7 @@ def alert_larg(dialog):
     if (largh_max.text() != '') and (largh_min.text() != ''):
         if int(largh_min.text()) > int(largh_max.text()):
             QMessageBox.warning(
-                None, 'WARNING!', "The value of the '15 MINIMA' field is greater than the value of the '14 MASSIMA' field!")
+                None, 'WARNING!', "Il valore del campo '15 MINIMA' e\' maggiore del valore del campo '14 MASSIMA'!")
             largh_min.setText('')
             largh_max.setText('')
 
@@ -344,7 +344,7 @@ def alert_larg_2(dialog):
     if (lungh.text() != '') and (lungh_vuo.text() != ''):
         if int(lungh_vuo.text()) > int(lungh.text()):
             QMessageBox.warning(
-                None, 'WARNING!', "The value of the '17 LUNGHEZZA TRATTO STRADALE SENZA AGGREGATIE UNITA' ISOLATE INTERFERENTI' field is greater than the value of the '16 LUNGHEZZA COMPLESSIVA' field!")
+                None, 'WARNING!', "Il valore del campo '17 LUNGHEZZA TRATTO STRADALE SENZA AGGREGATIE UNITA' ISOLATE INTERFERENTI' e\' maggiore del valore del campo '16 LUNGHEZZA COMPLESSIVA'!")
             lungh_vuo.setText('')
             lungh.setText('')
 
