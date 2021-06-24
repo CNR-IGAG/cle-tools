@@ -23,6 +23,7 @@ from .tb_aggiorna_progetto import aggiorna_progetto
 from .tb_esporta_shp import esporta_shp
 from .tb_info import info
 from .tb_nuovo_progetto import nuovo_progetto
+from .tb_generate_reports import ReportGen
 
 # from .tb_wait import wait
 
@@ -50,6 +51,10 @@ class CLETools(object):
         self.dlg_new_project = nuovo_progetto()
         self.dlg_info = info()
         self.dlg_export_shp = esporta_shp()
+        
+        # report generation tool
+        self.dlg_generate_reports = ReportGen()
+        self.dlg_generate_reports.pushButton_out.clicked.connect(self.select_output_fld_report)
 
         self.actions = []
         self.menu = self.tr("&CLE Tools")
@@ -128,6 +133,13 @@ class CLETools(object):
             parent=self.iface.mainWindow(),
         )
 
+        self.add_action(
+            icon_path5,
+            text=self.tr("Generate reports"),
+            callback=self.generate_reports,
+            parent=self.iface.mainWindow(),
+        )
+
         self.toolbar.addSeparator()
 
         self.add_action(
@@ -176,6 +188,12 @@ class CLETools(object):
             self.dlg_export_shp, "", "", QFileDialog.ShowDirsOnly
         )
         self.dlg_export_shp.dir_output.setText(out_dir)
+
+    def select_output_fld_report(self):
+        out_dir = QFileDialog.getExistingDirectory(
+            self.dlg_generate_reports, "", "", QFileDialog.ShowDirsOnly
+        )
+        self.dlg_generate_reports.dir_output.setText(out_dir)
 
     def check_project(self):
         percorso = QgsProject.instance().homePath()
@@ -239,6 +257,9 @@ class CLETools(object):
 
     def export_database(self):
         self.dlg_export_shp.esporta_prog()
+
+    def generate_reports(self):
+        self.dlg_generate_reports.generate_reports()
 
     def add_feature_or_record(self):
         proj = QgsProject.instance()

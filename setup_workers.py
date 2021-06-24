@@ -121,11 +121,16 @@ class setup_workers():
             'Worker',
             level=Qgis.Critical)
 
-        log_file.write(
-            "\n\n!!! Worker thread raised an exception:\n\n" + exception_string)
+        if log_file is not None:
+            log_file.write(
+                "\n\n!!! Worker thread raised an exception:\n\n" + exception_string)
 
     def set_worker_message(self, message, message_bar_item):
         message_bar_item.setText(message)
+        QgsMessageLog.logMessage(
+            message,
+            'Worker',
+            level=Qgis.Info)
 
     def set_worker_log_message(self, message, log_file):
         log_file.write(message)
