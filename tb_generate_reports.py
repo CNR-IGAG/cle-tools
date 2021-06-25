@@ -1,9 +1,4 @@
 import os
-import shutil
-import sqlite3
-import sys
-import webbrowser
-import zipfile
 
 from qgis.core import *
 from qgis.core import QgsMessageLog

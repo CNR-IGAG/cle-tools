@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          font-size: 12px;
+          color: #222222;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 align="center">
+      Analisi della condizione limite per l'emergenza dell'insediamento urbano
+    </h3>
+    <h2 align="center">Infrastrutture di accessibilità/connessione (AC)</h2>
+
+    <hr />
+
+    <h3 align="center">Identificativi</h3>
+
+    <table width="100%">
+      <tr>
+        <td>ID_AC:</td>
+        <td align="right"><strong>$ID_AC</strong></td>
+      </tr>
+      <tr>
+        <td>Data Compilazione:</td>
+        <td align="right"><strong>$data_ac</strong></td>
+      </tr>
+      <tr>
+        <td>Tipo infrastruttura:</td>
+        <td align="right"><strong>$tipo_infra</strong></td>
+      </tr>
+      <tr>
+        <td>Identificativo infrastrutture di Accessibilità/Connessione:</td>
+        <td align="right"><strong>$ID_infra</strong></td>
+      </tr>
+    </table>
+
+    <div>
+      <table width="100%">
+        <caption>
+          <strong>Codice ISTAT</strong>
+        </caption>
+        <tr style="background-color: #f0f0f0">
+          <td>Regione</td>
+          <td><strong>$regione</strong></td>
+          <td>$cod_reg</td>
+        </tr>
+        <tr style="background-color: #f0f0f0">
+          <td>Provincia</td>
+          <td><strong>$provincia</strong></td>
+          <td>$cod_prov</td>
+        </tr>
+        <tr style="background-color: #f0f0f0">
+          <td>Comune</td>
+          <td><strong>$comune</strong></td>
+          <td>$cod_com</td>
+        </tr>
+        <tr style="background-color: #f0f0f0">
+          <td>Località abitata</td>
+          <td>$localita</td>
+          <td>$cod_local</td>
+        </tr>
+      </table>
+    </div>
+
+    <hr />
+
+    <h3 align="center">Caratteristiche generali</h3>
+
+    <div>
+      <table width="100%">
+        <tr>
+          <td rowspan="3"><strong>Categoria strade</strong></td>
+          <td>$strade_a Autostrade urbane ed extraurbane</td>
+          <td>$strade_b Extraurbane principali</td>
+        </tr>
+        <tr>
+          <td>$strade_c Extraurbane secondarie</td>
+          <td>$strade_d Urbane di scorrimento</td>
+        </tr>
+        <tr>
+          <td>$strade_e Urbane di quartiere</td>
+          <td>$strade_f Locali</td>
+        </tr>
+      </table>
+    </div>
+
+    <br>
+
+    <div>
+      <table width="100%">  
+        <tr>
+          <td><strong>Larghezza sezione stradale (m)</strong></td>
+          <td>Massima $largh_max</td>
+          <td>Minima $largh_min</td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Lunghezza complessiva (m)</strong></td>
+          <td>$lungh</td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Lunghezza tratto stradale senza aggregati e unità isolate interferenti (m)</strong></td>
+          <td>$lungh_vuo</td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Pavimentazione e percorribilità (condizione del tratto peggiore)</strong></td>
+          <td>$pav_per</td>
+        </tr>
+      </table>
+    </div>
+   
+  </body>
+</html>
