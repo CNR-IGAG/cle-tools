@@ -13,7 +13,7 @@
     <h3 align="center">
       Analisi della condizione limite per l'emergenza dell'insediamento urbano
     </h3>
-    <h2 align="center">Infrastrutture di accessibilità/connessione (AC)</h2>
+    <h2 align="center">Area di emergenza (AE)</h2>
 
     <p align="center" style="color:#777777;font-size:8px;margin:0;">Generato dal plugin per QGIS "CLE Tools" - https://github.com/CNR-IGAG/cle-tools</p>
 
@@ -23,20 +23,32 @@
 
     <table width="100%">
       <tr>
-        <td>ID_AC:</td>
-        <td align="right"><strong>$ID_AC</strong></td>
+        <td>ID_AE:</td>
+        <td align="right"><strong>$ID_AE</strong></td>
       </tr>
       <tr>
         <td>Data Compilazione:</td>
-        <td align="right"><strong>$data_ac</strong></td>
+        <td align="right"><strong>$data_ae</strong></td>
       </tr>
       <tr>
-        <td>Tipo infrastruttura:</td>
-        <td align="right"><strong>$tipo_infra</strong></td>
+        <td>Identificativo Area di emergenza:</td>
+        <td align="right"><strong>$ID_area</strong></td>
       </tr>
       <tr>
-        <td>Identificativo infrastrutture di Accessibilità/Connessione:</td>
-        <td align="right"><strong>$ID_infra</strong></td>
+        <td>Denominazione:</td>
+        <td align="right"><strong>$denom</strong></td>
+      </tr>
+    </table>
+
+    <table width="100%">
+      <tr>
+        <td rowspan="2">Identificativi infrastrutture di Accessibilità/Connessione:</td>
+        <td><strong>a:</strong> $ID_infra_a</td>
+        <td><strong>c:</strong> $ID_infra_c</td>
+      </tr>
+      <tr>
+        <td><strong>b:</strong> $ID_infra_b</td>
+        <td><strong>d:</strong> $ID_infra_d</td>
       </tr>
     </table>
 
@@ -71,80 +83,69 @@
     <h3 align="center">Caratteristiche generali</h3>
 
     <div>
-      <table width="100%">
-        <tr>
-          <td rowspan="3"><strong>Categoria strade</strong></td>
-          <td>$strade_a Autostrade urbane ed extraurbane</td>
-          <td>$strade_b Extraurbane principali</td>
-        </tr>
-        <tr>
-          <td>$strade_c Extraurbane secondarie</td>
-          <td>$strade_d Urbane di scorrimento</td>
-        </tr>
-        <tr>
-          <td>$strade_e Urbane di quartiere</td>
-          <td>$strade_f Locali</td>
-        </tr>
-      </table>
-    </div>
-
-    <br>
-
-    <div>
       <table width="100%">  
         <tr>
-          <td width="40%"><strong>Larghezza sezione stradale (m)</strong></td>
-          <td>Massima $largh_max</td>
-          <td>Minima $largh_min</td>
+          <td width="40%"><strong>Tipologia</strong></td>
+          <td>$tipo_area</td>
+          <td> </td>
         </tr>
         <tr>
-          <td width="40%"><strong>Lunghezza complessiva (m)</strong></td>
-          <td colspan="2">$lungh</td>
+          <td width="40%"><strong>Piano di individuazione</strong></td>
+          <td>$piano</td>
+          <td> </td>
         </tr>
         <tr>
-          <td width="40%"><strong>Lunghezza tratto stradale senza aggregati e unità isolate interferenti (m)</strong></td>
-          <td colspan="2">$lungh_vuo</td>
+          <td width="40%"><strong>Anno di approvazione/individuazione</strong></td>
+          <td>$anno_piano</td>
+          <td> </td>
         </tr>
         <tr>
-          <td width="40%"><strong>Pavimentazione e percorribilità (condizione del tratto peggiore)</strong></td>
-          <td colspan="2">$pav_per</td>
+          <td width="40%"><strong>Numero aggregati interferenti (H>d)</strong></td>
+          <td>$n_aggreg</td>
+          <td> </td>
         </tr>
         <tr>
-          <td width="40%"><strong>Ostacoli e discontinuità (condizione del tratto peggiore)</strong></td>
-          <td colspan="2">$ost_disc</td>
+          <td width="40%"><strong>Numero altri manufatti interferenti (H>d)</strong></td>
+          <td>$n_manuf</td>
+          <td> </td>
         </tr>
         <tr>
-          <td width="40%"><strong>Numero aggregati interferenti</strong></td>
-          <td colspan="2">$n_aggreg</td>
+          <td width="40%"><strong>Superficie dell'area (mq)</strong></td>
+          <td>$superf</td>
+          <td> </td>
         </tr>
         <tr>
-          <td width="40%"><strong>Numero unità strutturali isolate interferenti (H>L)</strong></td>
-          <td colspan="2">$n_manuf</td>
+          <td width="40%"><strong>Dimensione rettangolo inscrivibile (m)</strong></td>
+          <td>Massima: $rett_max</td>
+          <td>Minima: $rett_min</td>
         </tr>
         <tr>
-          <td width="40%" rowspan="3"><strong>Elementi critici</strong></td>
-          <td>Ferrovie in attraversamento: $el_ferrov</td>
-          <td>Ponti e viadotti: $el_pont</td>
+          <td width="40%"><strong>Pavimentazione e percorribilità</strong></td>
+          <td>$pav_per</td>
+          <td></td>
         </tr>
         <tr>
-          <td>Tunnel artificiali o naturali: $el_tunn</td>
-          <td>Ponti e viadotti attraversanti: $el_pont_at</td>
+          <td width="40%" rowspan="3"><strong>Infrastrutture di servizio</strong></td>
+          <td>Acqua: </td>
+          <td>$infra_acq</td>
         </tr>
         <tr>
-          <td colspan="2">Muri: $el_muri</td>
+          <td>Elettricità: </td>
+          <td>$infra_ele</td>
         </tr>
         <tr>
-          <td width="40%"><strong>Pendenza massima dell'asse stradale</strong></td>
-          <td colspan="2">$pendenza</td>
+          <td>Fognatura: </td>
+          <td>$infra_fog</td>
         </tr>
         <tr>
           <td width="40%"><strong>Morfologia</strong></td>
-          <td colspan="2">$morf</td>
+          <td>$morf</td>
+          <td></td>
         </tr>
         <tr>
           <td width="40%"><strong>Ubicazione</strong></td>
-          <td>$ubic_sotto Sotto versante incombente o forte pendio </td>
-          <td>$ubic_sopra Sopra versante incombente o cresta </td>
+          <td>$ubic_sotto Sotto versante incombente o forte pendio</td>
+          <td>$ubic_sopra Sopra versante incombente o cresta</td>
         </tr>
         <tr>
           <td width="40%" rowspan="2"><strong>Microzonazione sismica</strong></td>
@@ -163,15 +164,15 @@
         </tr>
         <tr>
           <td width="40%" rowspan="4"><strong>Geologia/Idrogeologia</strong></td>
-          <td>Localizzazione frana:  </td>
-          <td>$frana_AC Interferente con edifici strategici <br>$frana_mon A monte <br>$frana_val A valle</td>
+          <td>Localizzazione frana: </td>
+          <td>$frana_AE Interferente con edif. strateg. <br>$frana_mon A monte <br>$frana_val A valle</td>
         </tr>
         <tr>
-          <td>Falda:</td>
+          <td>Falda: </td>
           <td>$falda</td>
         </tr>
         <tr>
-          <td>Acque superficiali:</td>
+          <td>Acque superficiali: </td>
           <td>$acq_sup</td>
         </tr>
         <tr>
