@@ -3,9 +3,12 @@
   <head>
     <style>
       body {
-          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-          font-size: 12px;
-          color: #222222;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        color: #222222;
+      }
+      .pad-bot td {
+        padding-bottom: 8px;
       }
     </style>
   </head>
@@ -21,7 +24,7 @@
 
     <h3 align="center">Identificativi</h3>
 
-    <table width="100%">
+    <table width="100%" class="pad-bot">
       <tr>
         <td>ID_AC:</td>
         <td align="right"><strong>$ID_AC</strong></td>
@@ -71,7 +74,7 @@
     <h3 align="center">Caratteristiche generali</h3>
 
     <div>
-      <table width="100%">
+      <table width="100%" class="pad-bot">
         <tr>
           <td rowspan="3"><strong>Categoria strade</strong></td>
           <td>$strade_a Autostrade urbane ed extraurbane</td>
@@ -91,7 +94,7 @@
     <br>
 
     <div>
-      <table width="100%">  
+      <table width="100%" class="pad-bot">  
         <tr>
           <td width="40%"><strong>Larghezza sezione stradale (m)</strong></td>
           <td>Massima $largh_max</td>

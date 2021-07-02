@@ -108,7 +108,7 @@ class aggiorna_progetto(QDialog, FORM_CLASS):
         QgsMessageLog.logMessage("Loading new project", "CLETools", level=Qgis.Info)
 
         project = QgsProject.instance()
-        project.read(os.path.join(proj_path, "progetto_MS.qgs"))
+        project.read(os.path.join(proj_path, "progetto_CLE.qgs"))
         comune_layer = QgsProject.instance().mapLayersByName("Comune del progetto")[0]
 
         features = comune_layer.getFeatures()
