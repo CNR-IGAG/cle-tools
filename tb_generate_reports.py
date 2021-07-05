@@ -1,15 +1,11 @@
 import os
 
-from qgis.core import *
-from qgis.core import QgsMessageLog
-from qgis.gui import *
+from qgis.core import QgsProject
 from qgis.PyQt import uic
-from qgis.PyQt.QtCore import *
-from qgis.PyQt.QtGui import *
-from qgis.PyQt.QtWidgets import *
-from qgis.utils import *
+from qgis.PyQt.QtCore import QCoreApplication
+from qgis.PyQt.QtWidgets import QDialog, QMessageBox
+from qgis.utils import iface
 
-from . import constants
 from .setup_workers import setup_workers
 from .workers.report_worker import ReportWorker
 
@@ -28,9 +24,17 @@ class ReportGen(QDialog, FORM_CLASS):
 
     def generate_reports(self):
 
-        self.help_button.setEnabled(False)  # to delete
+        # TODO: connect to docs
+        self.help_button.setEnabled(False)
         self.dir_output.clear()
-        self.alert_text.hide()
+
+        root = QgsProject.instance().layerTreeRoot()
+        cle_group = root.findGroup("CLE")
+        if cle_group:
+            self.alert_text.hide()
+        else:
+            self.alert_text.show()
+
         self.button_box.setEnabled(False)
         self.dir_output.textChanged.connect(self.validate_input)
 
@@ -59,9 +63,14 @@ class ReportGen(QDialog, FORM_CLASS):
                     )
 
             except Exception as z:
-                raise z
                 QMessageBox.critical(None, "ERROR!", 'Error:\n"' + str(z) + '"')
 
     def validate_input(self):
-        if os.path.exists(self.dir_output.text()):
-            self.button_box.setEnabled(True)
+        root = QgsProject.instance().layerTreeRoot()
+        cle_group = root.findGroup("CLE")
+
+        if cle_group:
+            self.button_box.setEnabled(os.path.exists(self.dir_output.text()))
+
+    def tr(self, message):
+        return QCoreApplication.translate('ReportGen', message)

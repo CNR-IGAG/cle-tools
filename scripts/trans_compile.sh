@@ -1,4 +1,4 @@
 #!/bin/bash
 # Compile translations
 
-lrelease i18n/MzSTools_it.ts
+lrelease i18n/CLETools_it.ts

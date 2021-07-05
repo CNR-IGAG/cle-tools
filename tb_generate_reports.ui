@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>esporta_shp</class>
- <widget class="QDialog" name="esporta_shp">
+ <class>generate_reports</class>
+ <widget class="QDialog" name="generate_reports">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Export as shapefile</string>
+   <string>Generate reports</string>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
@@ -53,7 +53,7 @@
       </font>
      </property>
      <property name="title">
-      <string>Export geodatabase to project folder</string>
+      <string>Generate PDF reports for every CLE feature</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="0" column="2">
@@ -245,7 +245,7 @@
   <connection>
    <sender>button_box</sender>
    <signal>accepted()</signal>
-   <receiver>esporta_shp</receiver>
+   <receiver>generate_reports</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -261,7 +261,7 @@
   <connection>
    <sender>button_box</sender>
    <signal>rejected()</signal>
-   <receiver>esporta_shp</receiver>
+   <receiver>generate_reports</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

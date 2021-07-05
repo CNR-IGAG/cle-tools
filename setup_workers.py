@@ -104,11 +104,11 @@ class setup_workers():
             log_file.close()
 
         if result is not None:
-            QMessageBox.information(iface.mainWindow(), 'INFORMATION!',
-                                    "Process completed.\n\nReport was saved in the project folder: %s" % self.logfile_path)
+            msg = "Process completed." + (f"\n\nReport was saved in the project folder: {self.logfile_path}" if log_file else "")
+            QMessageBox.information(iface.mainWindow(), 'Information', msg)
         else:
-            QMessageBox.critical(iface.mainWindow(), 'ERROR!',
-                                 "Process interrupted! Read the report saved in the project folder: %s" % self.logfile_path)
+            msg = "Process interrupted!" + (f"\n\nRead the report saved in the project folder: {self.logfile_path}" if log_file else "")
+            QMessageBox.critical(iface.mainWindow(), 'ERROR!', msg)
 
     def worker_error(self, e, exception_string, iface, log_file=None):
         # notify the user that something went wrong

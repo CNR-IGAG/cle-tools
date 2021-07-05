@@ -4,34 +4,52 @@
 <context>
     <name>CLETools</name>
     <message>
-        <location filename="../cle_tools.py" line="158"/>
+        <location filename="../cle_tools.py" line="170"/>
         <source>&amp;CLE Tools</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../cle_tools.py" line="115"/>
+        <location filename="../cle_tools.py" line="120"/>
         <source>New project</source>
         <translation>Nuovo progetto</translation>
     </message>
     <message>
-        <location filename="../cle_tools.py" line="124"/>
+        <location filename="../cle_tools.py" line="129"/>
         <source>Export geodatabase to project folder</source>
         <translation>Esporta i dati in una strutura di progetto standard</translation>
     </message>
     <message>
-        <location filename="../cle_tools.py" line="133"/>
+        <location filename="../cle_tools.py" line="145"/>
         <source>Add feature or record</source>
         <translation>Aggiungi una feature o un record</translation>
     </message>
     <message>
-        <location filename="../cle_tools.py" line="140"/>
+        <location filename="../cle_tools.py" line="152"/>
         <source>Save</source>
         <translation>Salva</translation>
     </message>
     <message>
-        <location filename="../cle_tools.py" line="149"/>
+        <location filename="../cle_tools.py" line="161"/>
         <source>Help</source>
         <translation>Aiuto</translation>
+    </message>
+    <message>
+        <location filename="../cle_tools.py" line="136"/>
+        <source>Generate reports</source>
+        <translation>Genera report</translation>
+    </message>
+</context>
+<context>
+    <name>ReportGen</name>
+    <message>
+        <location filename="../tb_generate_reports.py" line="59"/>
+        <source>WARNING!</source>
+        <translation>ATTENZIONE!</translation>
+    </message>
+    <message>
+        <location filename="../tb_generate_reports.py" line="59"/>
+        <source>The selected directory does not exist!</source>
+        <translation>La cartella selezionata non esiste!</translation>
     </message>
 </context>
 <context>
@@ -82,17 +100,17 @@ Una copia di backup è stata conservata nella seguente cartella: </translation>
         <translation>Destinazione</translation>
     </message>
     <message>
-        <location filename="../tb_esporta_shp.ui" line="122"/>
+        <location filename="../tb_esporta_shp.ui" line="116"/>
         <source>Message box</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../tb_esporta_shp.ui" line="134"/>
+        <location filename="../tb_esporta_shp.ui" line="128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;One or more fundamental layers have been removed / renamed within QGIS LAYER PANEL. Or the Limit Condition for the Emergency project has not started. Fix the problem before running this tool again.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Uno o piu&apos; layer fondamentali sono stati eliminati o rinominati all&apos;interno del pannello dei layer di QGIS. Non modificare la struttura iniziale dei layer del progetto generato dal plugin.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tb_esporta_shp.ui" line="239"/>
+        <location filename="../tb_esporta_shp.ui" line="233"/>
         <source>Help</source>
         <translation>Aiuto</translation>
     </message>
@@ -105,6 +123,44 @@ Una copia di backup è stata conservata nella seguente cartella: </translation>
         <location filename="../tb_esporta_shp.py" line="73"/>
         <source>The selected directory does not exist!</source>
         <translation>La cartella selezionata non esiste!</translation>
+    </message>
+</context>
+<context>
+    <name>generate_reports</name>
+    <message>
+        <location filename="../tb_generate_reports.ui" line="32"/>
+        <source>Generate reports</source>
+        <translation>Genera report</translation>
+    </message>
+    <message>
+        <location filename="../tb_generate_reports.ui" line="56"/>
+        <source>Generate PDF reports for every CLE feature</source>
+        <translation>Genera report in PDF per ogni feature CLE</translation>
+    </message>
+    <message>
+        <location filename="../tb_generate_reports.ui" line="71"/>
+        <source>...</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../tb_generate_reports.ui" line="94"/>
+        <source>Output</source>
+        <translation>Destinazione</translation>
+    </message>
+    <message>
+        <location filename="../tb_generate_reports.ui" line="116"/>
+        <source>Message box</source>
+        <translation>Informazioni</translation>
+    </message>
+    <message>
+        <location filename="../tb_generate_reports.ui" line="128"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;One or more fundamental layers have been removed / renamed within QGIS LAYER PANEL. Or the Limit Condition for the Emergency project has not started. Fix the problem before running this tool again.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Uno o piu&apos; layer fondamentali sono stati eliminati o rinominati all&apos;interno del pannello dei layer di QGIS, oppure il progetto CLE non è aperto. Non modificare la struttura iniziale dei layer del progetto generato dal plugin.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../tb_generate_reports.ui" line="233"/>
+        <source>Help</source>
+        <translation>Aiuto</translation>
     </message>
 </context>
 <context>

@@ -109,16 +109,10 @@ class CLETools(object):
         return action
 
     def initGui(self):
-        icon_path2 = (
-            self.plugin_dir + os.sep + "img" + os.sep + "ico_nuovo_progetto.png"
-        )
-        icon_path3 = self.plugin_dir + os.sep + "img" + os.sep + "ico_info.png"
-        icon_path5 = self.plugin_dir + os.sep + "img" + os.sep + "ico_esporta.png"
-        icon_path7 = self.plugin_dir + os.sep + "img" + os.sep + "ico_edita.png"
-        icon_path8 = self.plugin_dir + os.sep + "img" + os.sep + "ico_salva_edita.png"
+        icons_path = os.path.join(self.plugin_dir, "img")
 
         self.add_action(
-            icon_path2,
+            os.path.join(icons_path, "ico_nuovo_progetto.png"),
             text=self.tr("New project"),
             callback=self.new_project,
             parent=self.iface.mainWindow(),
@@ -127,30 +121,23 @@ class CLETools(object):
         self.toolbar.addSeparator()
 
         self.add_action(
-            icon_path5,
+            os.path.join(icons_path, "ico_esporta.png"),
             text=self.tr("Export geodatabase to project folder"),
             callback=self.export_database,
-            parent=self.iface.mainWindow(),
-        )
-
-        self.add_action(
-            icon_path5,
-            text=self.tr("Generate reports"),
-            callback=self.generate_reports,
             parent=self.iface.mainWindow(),
         )
 
         self.toolbar.addSeparator()
 
         self.add_action(
-            icon_path7,
+            os.path.join(icons_path, "ico_edita.png"),
             text=self.tr("Add feature or record"),
             callback=self.add_feature_or_record,
             parent=self.iface.mainWindow(),
         )
 
         self.add_action(
-            icon_path8,
+            os.path.join(icons_path, "ico_salva_edita.png"),
             text=self.tr("Save"),
             callback=self.save,
             parent=self.iface.mainWindow(),
@@ -159,7 +146,14 @@ class CLETools(object):
         self.toolbar.addSeparator()
 
         self.add_action(
-            icon_path3,
+            os.path.join(icons_path, "ico_pdf.png"),
+            text=self.tr("Generate reports"),
+            callback=self.generate_reports,
+            parent=self.iface.mainWindow(),
+        )
+
+        self.add_action(
+            os.path.join(icons_path, "ico_info.png"),
             text=self.tr("Help"),
             callback=self.help,
             parent=self.iface.mainWindow(),

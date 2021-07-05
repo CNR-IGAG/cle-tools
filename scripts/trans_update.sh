@@ -1,4 +1,4 @@
 #!/bin/bash
 # Update translations
 
-pylupdate5 mzs_tools.pro
+pylupdate5 cle_tools.pro
