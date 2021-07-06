@@ -1,6 +1,6 @@
 # CLE TOOLS
 
-[![Documentation Status](https://readthedocs.org/projects/cle-tools/badge/?version=latest)](https://cle-tools.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/cle-tools/badge/?version=latest)](https://cle-tools.readthedocs.io/it/latest/?badge=latest)
 
 **QGIS plugin for italian Limit Condition for the Emergency studies in urban areas**
 
