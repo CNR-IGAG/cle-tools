@@ -1,4 +1,5 @@
 import os
+import webbrowser
 
 from qgis.core import QgsProject
 from qgis.PyQt import uic
@@ -24,8 +25,7 @@ class ReportGen(QDialog, FORM_CLASS):
 
     def generate_reports(self):
 
-        # TODO: connect to docs
-        self.help_button.setEnabled(False)
+        self.help_button.clicked.connect(lambda: webbrowser.open("https://cle-tools.readthedocs.io"))
         self.dir_output.clear()
 
         root = QgsProject.instance().layerTreeRoot()

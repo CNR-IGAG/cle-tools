@@ -25,7 +25,8 @@ class info(QDialog, FORM_CLASS):
 
     def help(self):
         self.pushButton_ita.clicked.connect(
-            lambda: self.open_pdf(os.path.join(self.plugin_dir, "manuale.pdf"))
+            # lambda: self.open_pdf(os.path.join(self.plugin_dir, "manuale.pdf"))
+            lambda: webbrowser.open("https://cle-tools.readthedocs.io")
         )
         # self.pushButton_eng.clicked.connect(lambda: self.open_pdf(self.plugin_dir + os.sep + "manual.pdf"))
         self.pushButton_www.clicked.connect(

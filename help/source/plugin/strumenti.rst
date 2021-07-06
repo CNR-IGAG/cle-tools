@@ -39,7 +39,7 @@ Gli strumenti richiamabili tramite la toolbar sono:
 
 |ico5| **Salva** → :ref:`editing`
 
-|ico7| **Genera report** → :ref:`copia-oggetti`
+|ico7| **Genera report** → :ref:`report`
 
 |ico8| **Aiuto**
 
@@ -55,4 +55,13 @@ Layout di stampa
 
 Il plugin mette a disposizione un layout di stampa predisposto per l'output cartografico di uno studio di CLE. I layout sono accessibili tramite il menu “Progetto – Layout” di QGIS, all'interno di un progetto generato dal plugin. 
 
-Per maggiori informazioni vai a: :ref:`layout-stampa`
+.. _layout-stampa:
+
+Durante la creazione di un nuovo progetto, il plugin MzSTools genera una struttura di progetto specifica per il comune oggetto dello studio contenente anche il **layout di stampa** preimpostato secondo le indicazioni degli Standard MS. 
+
+Per poter operare sul layout di stampa, è necessario:
+
+* **attivare i layer contenuti nel group layer “Layout”**, i quali sono specificamente impostati per la restituzione cartografica;
+* **disattivare gli altri gruppi di layer** utilizzati per l’inserimento e l’editing dei dati. 
+
+I layout di stampa sono accessibili dal menu **“Progetto – Layout”**. Selezionando un layout viene aperta la finestra del compositore, in cui è possibile personalizzare manualmente alcuni elementi, quali ad esempio gli spazi testuali, ed aggiornare la legenda sulla base degli elementi effettivamente visibili su mappa.

@@ -30,3 +30,10 @@ Credits
 
 Il plugin viene sviluppato nell'ambito delle attività del 
 `Laboratorio GIS del CNR-IGAG <https://www.igag.cnr.it/lista-laboratori/labgis/>`_
+
+Riferimenti
+-----------
+
+* Commissione tecnica per la microzonazione sismica. *Manuale per l’analisi della Condizione Limite per l’Emergenza (CLE) dell’insediamento urbano.* Roma: Presidenza del Consiglio dei Ministri - Dipartimento della protezione civile. Tratto, il giorno 18 agosto del 2018, dal sito del `CentroMS <https://www.centromicrozonazionesismica.it/it/download/send/33-manuale-per-l-analisi-della-condizione-lite-per-l-emergenza-cle-dell-insediamento-urbano/89-manuale-per-l-analisi-della-condizione-lite-per-l-emergenza-cle-dell-insediamento-urbano>`_
+* Commissione tecnica per la microzonazione sismica. *Standard di rappresentazione e archiviazione informatica – Analisi della condizione limite per l’emergenza (CLE) (versione 3.1).* Roma: Commissione tecnica per la microzonazione sismica. Tratto, il giorno 20 dicembre del 2019, dal sito del `CentroMS <https://www.centromicrozonazionesismica.it/it/download/send/25-standardcle-31/70-standardclev3-1>`_
+* Manuale utente di QGIS 3.16  tratto il giorno 10/06/2021 da https://docs.qgis.org/3.16/it/docs/user_manual/ 

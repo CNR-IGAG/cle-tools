@@ -37,9 +37,8 @@ class nuovo_progetto(QDialog, FORM_CLASS):
         self.plugin_dir = os.path.dirname(__file__)
 
     def nuovo(self):
-        self.help_button.clicked.connect(lambda: webbrowser.open(
-            'https://www.youtube.com/watch?v=TcaljLE5TCk&t=57s&list=PLM5qQOkOkzgWH2VogqeQIDybylmE4P1TQ&index=2'))
-        self.help_button.setEnabled(False)  # to delete
+        self.help_button.clicked.connect(lambda: webbrowser.open("https://cle-tools.readthedocs.io"))
+        # self.help_button.setEnabled(False)
         dir_svg_input = self.plugin_dir + os.sep + "img" + os.sep + "svg"
         dir_svg_output = self.plugin_dir.split("python")[0] + "svg"
         tabella_controllo = self.plugin_dir + os.sep + "comuni.csv"

@@ -6,8 +6,6 @@
 Benvenuto nella documentazione di CLETools
 ==========================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 4
 

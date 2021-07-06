@@ -38,9 +38,7 @@ class esporta_shp(QDialog, FORM_CLASS):
         self.plugin_dir = os.path.dirname(__file__)
 
     def esporta_prog(self):
-        self.help_button.clicked.connect(lambda: webbrowser.open(
-            'https://www.youtube.com/watch?v=dYcMZSpu6HA&t=2s'))
-        self.help_button.setEnabled(False)  # to delete
+        self.help_button.clicked.connect(lambda: webbrowser.open("https://cle-tools.readthedocs.io"))
         self.dir_output.clear()
         self.alert_text.hide()
         self.button_box.setEnabled(False)
