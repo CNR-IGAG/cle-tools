@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        color: #222222;
+      }
+      .pad-bot td {
+        padding-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 align="center">
+      Analisi della condizione limite per l'emergenza dell'insediamento urbano
+    </h3>
+    <h2 align="center">Edificio strategico (ES)</h2>
+
+    <p align="center" style="color:#777777;font-size:8px;margin:0;">Generato dal plugin per QGIS "CLE Tools" - https://github.com/CNR-IGAG/cle-tools</p>
+
+    <hr />
+
+    <h3 align="center">Identificativi</h3>
+
+    <table width="100%" class="pad-bot">
+      <tr>
+        <td>ID_ES:</td>
+        <td align="right"><strong>$ID_ES</strong></td>
+      </tr>
+      <tr>
+        <td>Data Compilazione:</td>
+        <td align="right"><strong>$data_es</strong></td>
+      </tr>
+      <tr>
+        <td>Identificativo Aggregato strutturale:</td>
+        <td align="right"><strong>$ID_aggr</strong></td>
+      </tr>
+      <tr>
+        <td>Identificativo Unità strutturale:</td>
+        <td align="right"><strong>$ID_unit</strong></td>
+      </tr>
+      <tr>
+        <td>Identificativo Area di emergenza:</td>
+        <td align="right"><strong>$ID_area</strong></td>
+      </tr>
+    </table>
+
+    <table width="100%">
+      <tr>
+        <td rowspan="2">Identificativi infrastrutture di Accessibilità/Connessione:</td>
+        <td><strong>a:</strong> $ID_infra_a</td>
+        <td><strong>c:</strong> $ID_infra_c</td>
+      </tr>
+      <tr>
+        <td><strong>b:</strong> $ID_infra_b</td>
+        <td><strong>d:</strong> $ID_infra_d</td>
+      </tr>
+    </table>
+
+    <table width="100%">
+      <caption>
+        <strong>Codice ISTAT</strong>
+      </caption>
+      <tr style="background-color: #f0f0f0">
+        <td>Regione</td>
+        <td><strong>$regione</strong></td>
+        <td>$cod_reg</td>
+      </tr>
+      <tr style="background-color: #f0f0f0">
+        <td>Provincia</td>
+        <td><strong>$provincia</strong></td>
+        <td>$cod_prov</td>
+      </tr>
+      <tr style="background-color: #f0f0f0">
+        <td>Comune</td>
+        <td><strong>$comune</strong></td>
+        <td>$cod_com</td>
+      </tr>
+      <tr style="background-color: #f0f0f0">
+        <td>Località abitata</td>
+        <td>$localita</td>
+        <td>$cod_local</td>
+      </tr>
+      <tr>
+        <td>Sezione censuaria</td>
+        <td>$sezione</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Indirizzo</td>
+        <td>$indirizzo</td>
+        <td>Civico: $civico</td>
+      </tr>
+      <tr>
+        <td>Denominazione</td>
+        <td>$denom</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <br>
+
+    <hr />
+
+    <h3 align="center">Caratteristiche generali</h3>
+
+    <div>
+      <table width="100%" class="pad-bot">
+        <tr>
+          <td width="40%"><strong>Posizione nell'aggregato</strong></td>
+          <td>$isolato Isolata</td>
+          <td>Posizione: $posizio </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Fronte interferente su infrastruttura accessibilità/connessione (H>L) o area di emergenza (H>d)</strong></td>
+          <td>$fronte</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Unità strutturale specialistica</strong></td>
+          <td>$spec</td>
+          <td>Tipo: $specialis</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Numero piani totali (inclusi interrati)</strong></td>
+          <td>$n_piani</td>
+          <td>Piani interrati: $n_interr</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Altezza media di piano (m)</strong></td>
+          <td>$alt_piano</td>
+          <td>Altezza imposta copertura: $alt_totale</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Volume unico su AC</strong></td>
+          <td>$vol_unico</td>
+          <td>Sup. media piano (mq): $superf_m</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Struttura portante verticale</strong></td>
+          <td>$strutt_ver</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Tipo muratura</strong></td>
+          <td>$tipo_mur</td>
+          <td>$cord_cat Cordoli o catene</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Pilastri, pilotis, sopraelevazioni</strong></td>
+          <td colspan="2">
+            $pilastri Pilastri isolati <br>
+            $pilotis Piano pilotis <br>
+            $sopraelev Sopraelevazioni
+          </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Danno strutturale</strong></td>
+          <td>$danno</td>
+          <td>Stato manutentivo: $stato_man</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Proprietà</strong></td>
+          <td>$pr_pubb Pubblica</td>
+          <td>$pr_priv Privata</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Morfologia</strong></td>
+          <td>$morf</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Ubicazione</strong></td>
+          <td>$ubic_sotto Sotto versante incombente o forte pendio</td>
+          <td>$ubic_sopra Sopra versante incombente o cresta</td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="2"><strong>Microzonazione sismica</strong></td>
+          <td>Zona MS (condizione peggiore)</td>
+          <td>$zona_ms</td>
+        </tr>
+        <tr>
+          <td>Tipo instabilità:</td>
+          <td>
+            $inst_fran Frana <br>
+            $inst_liq Liquefazione <br>
+            $inst_fag Faglia att. cap. <br>
+            $inst_ced Cedim. diff. <br>
+            $inst_cav Cavità sott.
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="2"><strong>Geologia/Idrogeologia</strong></td>
+          <td>Localizzazione frana: </td>
+          <td>$frana_ar Interferente con edif. strateg. <br>$frana_mon A monte <br>$frana_val A valle</td>
+        </tr>
+        <tr>
+          <td>Rischio PAI: $pai</td>
+          <td>$alluvio Area alluvionale</td>
+        </tr>
+      </table>
+    </div>
+   
+    <hr />
+
+    <h3 align="center">Caratteristiche specifiche</h3>
+
+    <div>
+      <table width="100%" class="pad-bot">
+        <tr>
+          <td width="40%"><strong>Identificativo funzione strategica</strong></td>
+          <td colspan="2">$ID_edif</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Struttura di gestione dell'emergenza</strong></td>
+          <td colspan="2">$emerg_1 Ccs  $emerg_2 Dicomac  $emerg_3 Com  $emerg_4 Coi  $emerg_5 Coc  $emerg_6 Ricovero in emergenza</td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="2"><strong>Destinazione d'uso</strong></td>
+          <td colspan="2">Uso originario: $uso_orig <br>Uso attuale: $uso_att</td>
+        </tr>
+        <tr>
+          <td colspan="2">Anno di progettazione: $anno_prog <br>Anno di costruzione: $anno_cost</td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="2"><strong>Esposizione</strong></td>
+          <td colspan="2">Persone mediamente presenti: $esp_pers</td>
+        </tr>
+        <tr>
+          <td colspan="2">Ore fruizione nel giorno: $esp_ore <br>Mesi fruizione nell'anno: $esp_mes</td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="2"><strong>Interventi strutturali eseguiti</strong></td>
+          <td colspan="2">$interv Interventi dopo la costruzione:</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-left:20px;">
+            $interv_1 Ampliamenti <br>
+            $interv_2 Variazioni di destinazione che hanno comportato incremento di carichi al singolo piano superiori al 20% <br>
+            $interv_3 Interventi volti a trasformare l'edificio mediante insieme sistematico di opere che portino ad organismo diverso <br>
+            $interv_4 Interventi strutturali in modifica o sostituzione di parti strutturali, con alterazione comportamento globale <br>
+            $interv_5 Interventi di miglioramento/adeguamento sismico <br>
+            $interv_6 Interventi di sola riparazione dei danni strutturali <br>
+            $interv_7 Altro
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="3"><strong>Eventi subiti dalla struttura</strong></td>
+          <td colspan="2">
+            <table>
+              <tr>
+                <td>Codice evento: $evento_1</td>
+                <td>Data evento: $data_ev_1</td>
+                <td>Tipo intervento: $tipo_1</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr>
+                <td>Codice evento: $evento_2</td>
+                <td>Data evento: $data_ev_2</td>
+                <td>Tipo intervento: $tipo_2</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr>
+                <td>Codice evento: $evento_3</td>
+                <td>Data evento: $data_ev_3</td>
+                <td>Tipo intervento: $tipo_3</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Verifica sismica</strong></td>
+          <td colspan="2">$verif_sism</td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>

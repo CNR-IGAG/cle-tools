@@ -37,9 +37,8 @@ class nuovo_progetto(QDialog, FORM_CLASS):
         self.plugin_dir = os.path.dirname(__file__)
 
     def nuovo(self):
-        self.help_button.clicked.connect(lambda: webbrowser.open(
-            'https://www.youtube.com/watch?v=TcaljLE5TCk&t=57s&list=PLM5qQOkOkzgWH2VogqeQIDybylmE4P1TQ&index=2'))
-        self.help_button.setEnabled(False)  # to delete
+        self.help_button.clicked.connect(lambda: webbrowser.open("https://cle-tools.readthedocs.io"))
+        # self.help_button.setEnabled(False)
         dir_svg_input = self.plugin_dir + os.sep + "img" + os.sep + "svg"
         dir_svg_output = self.plugin_dir.split("python")[0] + "svg"
         tabella_controllo = self.plugin_dir + os.sep + "comuni.csv"
@@ -216,7 +215,7 @@ class nuovo_progetto(QDialog, FORM_CLASS):
 
                     for layout in layouts:
                         map_item = layout.itemById('mappa_0')
-                        map_item.setExtent(canvas.extent())
+                        map_item.zoomToExtent(canvas.extent())
                         map_item_2 = layout.itemById(
                             'regio_title')
                         map_item_2.setText("Regione " + regione)
@@ -241,18 +240,18 @@ class nuovo_progetto(QDialog, FORM_CLASS):
                     # Save the project!
                     project.write(project_path)
                     QMessageBox.information(
-                        None, 'INFORMATION!', "The project has been created successfully!")
+                        None, self.tr('INFORMATION!'), self.tr("The project has been created successfully!"))
 
                 except Exception as z:
-                    raise z
+                    # raise z
                     QMessageBox.critical(
                         None, 'ERROR!', 'Error:\n"' + str(z) + '"')
-                    if os.path.exists(dir_out + os.sep + "progetto_MS"):
-                        shutil.rmtree(dir_out + os.sep + "progetto_MS")
+                    if os.path.exists(os.path.join(dir_out, "progetto_MS")):
+                        shutil.rmtree(os.path.join(dir_out, "progetto_MS"))
 
             else:
                 QMessageBox.warning(
-                    iface.mainWindow(), 'WARNING!', "The selected directory does not exist!")
+                    iface.mainWindow(), self.tr('WARNING!'), self.tr("The selected directory does not exist!"))
 
     def disableButton(self):
         check_campi = [self.professionista.text(), self.email_prof.text(), self.sito_prof.text(), self.propretario.text(), self.ufficio.text(), self.email_prop.text(), self.sito_prop.text(), self.contatto.text(
@@ -320,3 +319,6 @@ class nuovo_progetto(QDialog, FORM_CLASS):
             if letter == "'":
                 word = word.replace(letter, "''")
         return word
+
+    def tr(self, message):
+        return QCoreApplication.translate('nuovo_progetto', message)

@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cle_es</class>
+ <widget class="QDialog" name="cle_es">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>830</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>2500</width>
+    <height>1500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Update project</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,1,0">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_14">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ANALISI DELLA CONDIZIONE LIMITE PER L'EMERGENZA DELL'INSEDIAMENTO URBANO&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;EDIFICIO STRATEGICO (ES)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="ID_ES">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QToolBox" name="toolBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="identificativi">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1488</width>
+        <height>702</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <attribute name="label">
+       <string>Sezione 1 - IDENTIFICATIVI</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Data compilazione</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QgsDateTimeEdit" name="data_es"/>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Codice ISTAT</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_10">
+          <item row="3" column="2">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>questi campi verranno compilati automaticamente dal plugin.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLineEdit" name="comune">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>3  Comune</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_46">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nota:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLineEdit" name="provincia">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLineEdit" name="regione">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="cod_reg">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>1  Regione</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="cod_prov">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>2  Provincia</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="cod_com">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>4  Località abitata</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_26" stretch="2,1">
+         <item>
+          <widget class="QComboBox" name="localita"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="cod_local">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>5  Sezione censuaria</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="sezione"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>6 Identificativo&lt;br&gt;Aggregato Strutturale</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="ID_aggr"/>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLabel" name="text_alert_as">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Il numero di cifre immesso è maggiore di quello consentito!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>7  Identificativo Unità Strutturale</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="ID_unit"/>
+       </item>
+       <item row="7" column="1" colspan="2">
+        <widget class="QLabel" name="text_alert_us">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Il numero di cifre immesso è maggiore di quello consentito!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>8  Identificativo Area di Emergenza</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLineEdit" name="ID_area"/>
+       </item>
+       <item row="9" column="1" colspan="2">
+        <widget class="QLabel" name="text_alert_ae">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Il numero di cifre immesso è maggiore di quello consentito!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>9  Identificativi infrastrutture&lt;br&gt;di Accessibilità/Connessione</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1" colspan="2">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="ID_infra_d"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>b</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>d</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="ID_infra_c"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="ID_infra_b"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>c</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="ID_infra_a"/>
+         </item>
+        </layout>
+       </item>
+       <item row="11" column="1" colspan="2">
+        <widget class="QLabel" name="text_alert_ac">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;Il numero di cifre immesso è maggiore di quello consentito!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>10  Indirizzo</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="1,0">
+         <item>
+          <widget class="QLineEdit" name="indirizzo"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>11 Civico</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="civico"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="label_19">
+         <property name="text">
+          <string>12b  Denominazione</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QLineEdit" name="denom"/>
+       </item>
+       <item row="14" column="0" colspan="3">
+        <spacer name="verticalSpacer_14">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="caratteristiche_gen">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1488</width>
+        <height>702</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <attribute name="label">
+       <string>Sezione 2 - CARATTERISTICHE GENERALI</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="12" column="0">
+        <widget class="QLabel" name="label_31">
+         <property name="text">
+          <string>Proprietà </string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>15 Fronte interferente su infrastruttura&lt;br&gt;accessibilità/connessione (H&amp;gt;L) o area&lt;br&gt;di emergenza (H&amp;gt;d)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLineEdit" name="n_piani"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_38">
+           <property name="text">
+            <string>19 Piani interrati</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="n_interr"/>
+         </item>
+        </layout>
+       </item>
+       <item row="15" column="0">
+        <widget class="QLabel" name="label_34">
+         <property name="text">
+          <string>Microzonazione sismica</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="2">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <widget class="QLabel" name="label_50">
+             <property name="text">
+              <string>Localizzazione frana</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="frana_ar">
+             <property name="text">
+              <string>43 Interferente con edif. strateg.</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="frana_mon">
+             <property name="text">
+              <string>44 A monte</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="frana_val">
+             <property name="text">
+              <string>45 A valle</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="QLabel" name="label_51">
+             <property name="text">
+              <string>46 Rischio PAI</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="pai"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_52">
+             <property name="text">
+              <string>47 Area alluvionale</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="alluvio"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="label_30">
+         <property name="text">
+          <string>30 Danno strutturale</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QCheckBox" name="pr_pubb">
+           <property name="text">
+            <string>32 Pubblica</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="pr_priv">
+           <property name="text">
+            <string>33 Privata</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>34 Morfologia </string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QComboBox" name="strutt_ver"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>16  Unità strutturale specialistica</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_29">
+         <property name="text">
+          <string>27 Pilastri isolati</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QComboBox" name="pilastri"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_43">
+           <property name="text">
+            <string>28 Piano pilotis</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="pilotis"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_44">
+           <property name="text">
+            <string>29 Sopraelevazioni</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="sopraelev"/>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QComboBox" name="vol_unico"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_41">
+           <property name="text">
+            <string>23 Sup. media piano (mq)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="superf_m"/>
+         </item>
+        </layout>
+       </item>
+       <item row="15" column="2">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_48">
+             <property name="text">
+              <string>37 Zona MS (condizione peggiore)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="zona_ms"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <widget class="QLabel" name="inst_name">
+             <property name="text">
+              <string>Tipo instabilità</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="inst_fran">
+             <property name="text">
+              <string>38 Frana</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="inst_liq">
+             <property name="text">
+              <string>39 Liquefazione</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="inst_fag">
+             <property name="text">
+              <string>40 Faglia att. cap.</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="inst_ced">
+             <property name="text">
+              <string>41 Cedim. diff.</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="inst_cav">
+             <property name="text">
+              <string>42 Cavità sott.</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="16" column="0">
+        <widget class="QLabel" name="label_35">
+         <property name="text">
+          <string>Geologia/Idrogeologia</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_28">
+         <property name="text">
+          <string>25 Tipo muratura</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QComboBox" name="danno">
+           <property name="currentIndex">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_45">
+           <property name="text">
+            <string>31 Stato manutentivo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="stato_man"/>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QComboBox" name="spec"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_39">
+           <property name="text">
+            <string>17 Tipo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="specialis"/>
+         </item>
+        </layout>
+       </item>
+       <item row="14" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QCheckBox" name="ubic_sotto">
+             <property name="text">
+              <string>35 Sotto versante incombente o forte pendio</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="ubic_sopra">
+             <property name="text">
+              <string>36 Sopra versante incombente o cresta</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="5" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QComboBox" name="alt_piano"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_40">
+           <property name="text">
+            <string>21 Altezza imposta copertura</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="alt_totale"/>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>Posizione nell'aggregato</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QComboBox" name="tipo_mur"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_42">
+           <property name="text">
+            <string>26 Cordoli o catene</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cord_cat"/>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>22  Volume unico su AC</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QComboBox" name="fronte"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>20  Altezza media di piano (m)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_27">
+         <property name="text">
+          <string>24  Struttura portante verticale</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_36">
+           <property name="text">
+            <string>13 Isolata</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="isolato"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_37">
+           <property name="text">
+            <string>14 Posizione</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="posizio"/>
+         </item>
+        </layout>
+       </item>
+       <item row="13" column="2">
+        <widget class="QComboBox" name="morf"/>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>Ubicazione</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>18  Numero piani totali (inclusi interrati)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0">
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="caratteristiche_spec">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1488</width>
+        <height>702</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <attribute name="label">
+       <string>Sezione 3 - CARATTERISTICHE SPECIFICHE</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="2">
+        <widget class="QComboBox" name="ID_edif"/>
+       </item>
+       <item row="5" column="2">
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_23">
+           <item>
+            <widget class="QLabel" name="label_64">
+             <property name="text">
+              <string>54 Persone mediamente presenti</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="esp_pers"/>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_24">
+           <item>
+            <widget class="QLabel" name="label_65">
+             <property name="text">
+              <string>55 Ore fruizione nel giorno</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="esp_ore"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_66">
+             <property name="text">
+              <string>56 Mesi fruizione nell'anno</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="esp_mes"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_59">
+         <property name="text">
+          <string>Eventi subiti dalla struttura</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="interv_name">
+         <property name="text">
+          <string>Interventi strutturali eseguiti</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_67">
+           <property name="text">
+            <string>66 Codice evento</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="evento_1"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="date_label_1">
+           <property name="text">
+            <string>67 Data</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QgsDateTimeEdit" name="data_ev_1"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="label_69">
+           <property name="text">
+            <string>68 Tipo intervento</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QComboBox" name="tipo_1"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_70">
+           <property name="text">
+            <string>69 Codice evento</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="evento_2"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="date_label_2">
+           <property name="text">
+            <string>70 Data</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QgsDateTimeEdit" name="data_ev_2"/>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLabel" name="label_72">
+           <property name="text">
+            <string>71 Tipo intervento</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QComboBox" name="tipo_2"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_73">
+           <property name="text">
+            <string>72 Codice evento</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="evento_3"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="date_label_3">
+           <property name="text">
+            <string>73 Data</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QgsDateTimeEdit" name="data_ev_3"/>
+         </item>
+         <item row="2" column="4">
+          <widget class="QLabel" name="label_75">
+           <property name="text">
+            <string>74 Tipo intervento</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QComboBox" name="tipo_3"/>
+         </item>
+        </layout>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_57">
+         <property name="text">
+          <string>Esposizione</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_19">
+         <item>
+          <widget class="QCheckBox" name="emerg_1">
+           <property name="text">
+            <string>Ccs</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="emerg_2">
+           <property name="text">
+            <string>Dicomac</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="emerg_3">
+           <property name="text">
+            <string>Com</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="emerg_4">
+           <property name="text">
+            <string>Coi</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="emerg_5">
+           <property name="text">
+            <string>Coc</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="emerg_6">
+           <property name="text">
+            <string>49b Ricovero in emergenza</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="9" column="2">
+        <widget class="QComboBox" name="verif_sism"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_55">
+         <property name="text">
+          <string>Destinazione d'uso</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_60">
+         <property name="text">
+          <string>75 Verifica sismica</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="0,1,0,0">
+           <item>
+            <widget class="QLabel" name="label_76">
+             <property name="text">
+              <string>57 Interventi dopo la costruzione</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="interv"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_77">
+             <property name="text">
+              <string>58 Anno</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="interv_ann">
+             <property name="maxLength">
+              <number>4</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QVBoxLayout" name="intev_n">
+           <item>
+            <widget class="QCheckBox" name="interv_1">
+             <property name="text">
+              <string>59 Ampliamenti</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="interv_2">
+             <property name="text">
+              <string>60 Variazioni di destinazione che hanno comportato incremento di carichi al singolo piano superiori al 20%</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="interv_3">
+             <property name="text">
+              <string>61 Interventi volti a trasformare l'edificio mediante insieme sistematico di opere che portino ad organismo diverso</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="interv_4">
+             <property name="text">
+              <string>62 Interventi strutturali in modifica o sostituzione di parti strutturali, con alterazione comportamento globale</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="interv_5">
+             <property name="text">
+              <string>63 Interventi di miglioramento/adeguamento sismico</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="interv_6">
+             <property name="text">
+              <string>64 Interventi di sola riparazione dei danni strutturali</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="interv_7">
+             <property name="text">
+              <string>65 Altro</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_22"/>
+       </item>
+       <item row="4" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_21">
+         <item>
+          <widget class="QLabel" name="label_56">
+           <property name="text">
+            <string>52 Anno di progettazione</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="anno_prog">
+           <property name="maxLength">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_63">
+           <property name="text">
+            <string>53 Anno di fine costruzione</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="anno_cost">
+           <property name="maxLength">
+            <number>4</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_20">
+         <item>
+          <widget class="QLabel" name="label_61">
+           <property name="text">
+            <string>50 Uso originario</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="uso_orig"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_62">
+           <property name="text">
+            <string>51 Uso attuale</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="uso_att"/>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_54">
+         <property name="text">
+          <string>49 Struttura di gestione dell'emergenza</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_53">
+         <property name="text">
+          <string>48 Identificativo funzione strategica</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QGroupBox" name="message_box">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>100000</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Message box</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="error_text">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No errors&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="cnr">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>84</width>
+           <height>61</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../loghi/logo-cnr.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="igag">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>90</width>
+           <height>62</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../loghi/logo-igag.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QDialogButtonBox" name="button_box">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="standardButtons">
+            <set>QDialogButtonBox::Ok</set>
+           </property>
+           <property name="centerButtons">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="help_button">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Help</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsDateTimeEdit</class>
+   <extends>QDateTimeEdit</extends>
+   <header>qgsdatetimeedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>ID_ES</tabstop>
+  <tabstop>data_es</tabstop>
+  <tabstop>comune</tabstop>
+  <tabstop>provincia</tabstop>
+  <tabstop>regione</tabstop>
+  <tabstop>cod_reg</tabstop>
+  <tabstop>cod_prov</tabstop>
+  <tabstop>cod_com</tabstop>
+  <tabstop>localita</tabstop>
+  <tabstop>cod_local</tabstop>
+  <tabstop>sezione</tabstop>
+  <tabstop>ID_aggr</tabstop>
+  <tabstop>ID_unit</tabstop>
+  <tabstop>ID_area</tabstop>
+  <tabstop>ID_infra_a</tabstop>
+  <tabstop>ID_infra_c</tabstop>
+  <tabstop>ID_infra_b</tabstop>
+  <tabstop>ID_infra_d</tabstop>
+  <tabstop>indirizzo</tabstop>
+  <tabstop>civico</tabstop>
+  <tabstop>denom</tabstop>
+  <tabstop>isolato</tabstop>
+  <tabstop>posizio</tabstop>
+  <tabstop>fronte</tabstop>
+  <tabstop>spec</tabstop>
+  <tabstop>specialis</tabstop>
+  <tabstop>n_piani</tabstop>
+  <tabstop>n_interr</tabstop>
+  <tabstop>alt_piano</tabstop>
+  <tabstop>alt_totale</tabstop>
+  <tabstop>vol_unico</tabstop>
+  <tabstop>superf_m</tabstop>
+  <tabstop>strutt_ver</tabstop>
+  <tabstop>tipo_mur</tabstop>
+  <tabstop>cord_cat</tabstop>
+  <tabstop>pilastri</tabstop>
+  <tabstop>pilotis</tabstop>
+  <tabstop>sopraelev</tabstop>
+  <tabstop>danno</tabstop>
+  <tabstop>stato_man</tabstop>
+  <tabstop>pr_pubb</tabstop>
+  <tabstop>pr_priv</tabstop>
+  <tabstop>morf</tabstop>
+  <tabstop>ubic_sotto</tabstop>
+  <tabstop>ubic_sopra</tabstop>
+  <tabstop>zona_ms</tabstop>
+  <tabstop>inst_fran</tabstop>
+  <tabstop>inst_liq</tabstop>
+  <tabstop>inst_fag</tabstop>
+  <tabstop>inst_ced</tabstop>
+  <tabstop>inst_cav</tabstop>
+  <tabstop>frana_ar</tabstop>
+  <tabstop>frana_mon</tabstop>
+  <tabstop>frana_val</tabstop>
+  <tabstop>pai</tabstop>
+  <tabstop>alluvio</tabstop>
+  <tabstop>ID_edif</tabstop>
+  <tabstop>emerg_1</tabstop>
+  <tabstop>emerg_2</tabstop>
+  <tabstop>emerg_3</tabstop>
+  <tabstop>emerg_4</tabstop>
+  <tabstop>emerg_5</tabstop>
+  <tabstop>emerg_6</tabstop>
+  <tabstop>uso_orig</tabstop>
+  <tabstop>uso_att</tabstop>
+  <tabstop>anno_prog</tabstop>
+  <tabstop>anno_cost</tabstop>
+  <tabstop>esp_pers</tabstop>
+  <tabstop>esp_ore</tabstop>
+  <tabstop>esp_mes</tabstop>
+  <tabstop>interv</tabstop>
+  <tabstop>interv_ann</tabstop>
+  <tabstop>interv_1</tabstop>
+  <tabstop>interv_2</tabstop>
+  <tabstop>interv_3</tabstop>
+  <tabstop>interv_4</tabstop>
+  <tabstop>interv_5</tabstop>
+  <tabstop>interv_6</tabstop>
+  <tabstop>interv_7</tabstop>
+  <tabstop>evento_1</tabstop>
+  <tabstop>data_ev_1</tabstop>
+  <tabstop>tipo_1</tabstop>
+  <tabstop>evento_2</tabstop>
+  <tabstop>data_ev_2</tabstop>
+  <tabstop>tipo_2</tabstop>
+  <tabstop>evento_3</tabstop>
+  <tabstop>data_ev_3</tabstop>
+  <tabstop>tipo_3</tabstop>
+  <tabstop>verif_sism</tabstop>
+  <tabstop>help_button</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_box</sender>
+   <signal>accepted()</signal>
+   <receiver>cle_es</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_box</sender>
+   <signal>rejected()</signal>
+   <receiver>cle_es</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

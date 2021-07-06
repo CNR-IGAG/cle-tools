@@ -8,7 +8,7 @@ qgisMinimumVersion=3.0
 
 description=Plugin for Italian Emergency Limit Condition analysis.
 
-version=0.6
+version=0.5
 author=IGAG-CNR
 email=labgis@igag.cnr.it
 
@@ -19,8 +19,6 @@ about=The plugin allows the creation of the database and the cartographic repres
 	Il plugin consente la creazione della banca dati e la rappresentazione cartografica delle analisi della Condizione Limite per l'Emergenza secondo gli Standard di rappresentazione ed archiviazione informatica versione 3.1 (Commissione tecnica per la microzonazione sismica - art. 5, comma 7 dell’OPCM 13 nov. 2010, n. 3907).
 	<b>NOTA:</b> come descritto all'interno della licenza GPLv3, il fornitore del software non fornisce alcun tipo di garanzia per il programma.
 changelog=
-		v0.6:
-				-  Bugfixing pre-release
 		v0.5:
 				-  Ported to QGIS 3
 		v0.4:
@@ -50,7 +48,7 @@ repository=https://github.com/CNR-IGAG/cle-tools
 tags=condizione limite per l'emergenza, emergency limit condition, italy, seismic hazard, pericolosità geologica
 
 
-homepage=https://github.com/CNR-IGAG/cle-tools/wiki
+homepage=https://github.com/CNR-IGAG/cle-tools
 category=Database
 icon=icon.png
 # experimental flag

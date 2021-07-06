@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        color: #222222;
+      }
+      .pad-bot td {
+        padding-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 align="center">
+      Analisi della condizione limite per l'emergenza dell'insediamento urbano
+    </h3>
+    <h2 align="center">Area di emergenza (AE)</h2>
+
+    <p align="center" style="color:#777777;font-size:8px;margin:0;">Generato dal plugin per QGIS "CLE Tools" - https://github.com/CNR-IGAG/cle-tools</p>
+
+    <hr />
+
+    <h3 align="center">Identificativi</h3>
+
+    <table width="100%" class="pad-bot">
+      <tr>
+        <td>ID_AE:</td>
+        <td align="right"><strong>$ID_AE</strong></td>
+      </tr>
+      <tr>
+        <td>Data Compilazione:</td>
+        <td align="right"><strong>$data_ae</strong></td>
+      </tr>
+      <tr>
+        <td>Identificativo Area di emergenza:</td>
+        <td align="right"><strong>$ID_area</strong></td>
+      </tr>
+      <tr>
+        <td>Denominazione:</td>
+        <td align="right"><strong>$denom</strong></td>
+      </tr>
+    </table>
+
+    <table width="100%">
+      <tr>
+        <td rowspan="2">Identificativi infrastrutture di Accessibilità/Connessione:</td>
+        <td><strong>a:</strong> $ID_infra_a</td>
+        <td><strong>c:</strong> $ID_infra_c</td>
+      </tr>
+      <tr>
+        <td><strong>b:</strong> $ID_infra_b</td>
+        <td><strong>d:</strong> $ID_infra_d</td>
+      </tr>
+    </table>
+
+    <table width="100%">
+      <caption>
+        <strong>Codice ISTAT</strong>
+      </caption>
+      <tr style="background-color: #f0f0f0">
+        <td>Regione</td>
+        <td><strong>$regione</strong></td>
+        <td>$cod_reg</td>
+      </tr>
+      <tr style="background-color: #f0f0f0">
+        <td>Provincia</td>
+        <td><strong>$provincia</strong></td>
+        <td>$cod_prov</td>
+      </tr>
+      <tr style="background-color: #f0f0f0">
+        <td>Comune</td>
+        <td><strong>$comune</strong></td>
+        <td>$cod_com</td>
+      </tr>
+      <tr style="background-color: #f0f0f0">
+        <td>Località abitata</td>
+        <td>$localita</td>
+        <td>$cod_local</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h3 align="center">Caratteristiche generali</h3>
+
+    <div>
+      <table width="100%" class="pad-bot">  
+        <tr>
+          <td width="40%"><strong>Tipologia</strong></td>
+          <td>$tipo_area</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Piano di individuazione</strong></td>
+          <td>$piano</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Anno di approvazione/individuazione</strong></td>
+          <td>$anno_piano</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Numero aggregati interferenti (H>d)</strong></td>
+          <td>$n_aggreg</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Numero altri manufatti interferenti (H>d)</strong></td>
+          <td>$n_manuf</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Superficie dell'area (mq)</strong></td>
+          <td>$superf</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Dimensione rettangolo inscrivibile (m)</strong></td>
+          <td>Massima: $rett_max</td>
+          <td>Minima: $rett_min</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Pavimentazione e percorribilità</strong></td>
+          <td>$pav_per</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="3"><strong>Infrastrutture di servizio</strong></td>
+          <td>Acqua: </td>
+          <td>$infra_acq</td>
+        </tr>
+        <tr>
+          <td>Elettricità: </td>
+          <td>$infra_ele</td>
+        </tr>
+        <tr>
+          <td>Fognatura: </td>
+          <td>$infra_fog</td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Morfologia</strong></td>
+          <td>$morf</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td width="40%"><strong>Ubicazione</strong></td>
+          <td>$ubic_sotto Sotto versante incombente o forte pendio</td>
+          <td>$ubic_sopra Sopra versante incombente o cresta</td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="2"><strong>Microzonazione sismica</strong></td>
+          <td>Zona MS (condizione peggiore)</td>
+          <td>$zona_ms</td>
+        </tr>
+        <tr>
+          <td>Tipo instabilità:</td>
+          <td>
+            $inst_fran Frana <br>
+            $inst_liq Liquefazione <br>
+            $inst_fag Faglia att. cap. <br>
+            $inst_ced Cedim. diff. <br>
+            $inst_cav Cavità sott.
+          </td>
+        </tr>
+        <tr>
+          <td width="40%" rowspan="4"><strong>Geologia/Idrogeologia</strong></td>
+          <td>Localizzazione frana: </td>
+          <td>$frana_AE Interferente con edif. strateg. <br>$frana_mon A monte <br>$frana_val A valle</td>
+        </tr>
+        <tr>
+          <td>Falda: </td>
+          <td>$falda</td>
+        </tr>
+        <tr>
+          <td>Acque superficiali: </td>
+          <td>$acq_sup</td>
+        </tr>
+        <tr>
+          <td>Rischio PAI: $pai</td>
+          <td>$alluvio Area alluvionale</td>
+        </tr>
+      </table>
+    </div>
+   
+  </body>
+</html>
