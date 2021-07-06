@@ -1,12 +1,20 @@
 # CLE TOOLS
 
+[![Documentation Status](https://readthedocs.org/projects/cle-tools/badge/?version=latest)](https://cle-tools.readthedocs.io/en/latest/?badge=latest)
+
 **QGIS plugin for italian Limit Condition for the Emergency studies in urban areas**
+
+Download and install from the QGIS 3.16+ plugin manager or directly from the [plugin repository](https://plugins.qgis.org/plugins/CLETools/).
+
+Documentation: [https://cle-tools.readthedocs.io](https://cle-tools.readthedocs.io)
 
 ## Changelog:
 
 ### v0.5:
 
 - QGIS 3 port
+- Report generator added
+- Online docs added
 
 ### v0.4:
 
