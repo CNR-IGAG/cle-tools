@@ -1,7 +1,13 @@
 .. _esportazione:
 
-Esportazione del progetto in una struttura standard
----------------------------------------------------
+Esportazione del progetto
+-------------------------
+
+.. warning:: Lo strumento di esportazione non produce il database in formato Microsoft Access `CLE_db.mdb`,
+  come richiesto dagli attuali standard CLE versione 3.1, ma un equivalente database SQlite.
+
+  Il database SQLite esportato contiene semplici tabelle alfanumeriche, i cui dati possono essere esportati
+  manualmente, ad esempio in formato `csv`, e quindi importati all'interno del database Access.
 
 .. |ico3| image:: ../../../img/ico_esporta.png
   :height: 25
