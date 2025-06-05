@@ -8,9 +8,9 @@ Download and install from the QGIS 3.16+ plugin manager or directly from the [pl
 
 Documentation: [https://cle-tools.readthedocs.io](https://cle-tools.readthedocs.io)
 
-## WARNING: THE PLUGIN IS CURRENTLY NOT MAINTAINED. Please consider using [sofCLE](https://centromicrozonazionesismica.it/it/strumenti/software/) instead.
+## WARNING: THE PLUGIN IS CURRENTLY NOT MAINTAINED. Please consider using [softCLE](https://centromicrozonazionesismica.it/it/strumenti/software/) instead.
 
-## ATTENZIONE: IL PLUGIN AL MOMENTO NON E' ATTIVAMENTE SVILUPPATO O MANTENUTO. Si prega di considerare l'utilizzo di [sofCLE](https://centromicrozonazionesismica.it/it/strumenti/software/) invece.
+## ATTENZIONE: IL PLUGIN AL MOMENTO NON E' ATTIVAMENTE SVILUPPATO O MANTENUTO. Si prega di considerare l'utilizzo di [softCLE](https://centromicrozonazionesismica.it/it/strumenti/software/) invece.
 
 ## Changelog:
 
