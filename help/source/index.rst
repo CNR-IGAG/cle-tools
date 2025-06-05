@@ -6,6 +6,8 @@
 Benvenuto nella documentazione di CLETools
 ==========================================
 
+.. Attention::  IL PLUGIN AL MOMENTO NON E' ATTIVAMENTE SVILUPPATO O MANTENUTO. Si prega di considerare l'utilizzo di `softCLE <https://centromicrozonazionesismica.it/it/strumenti/software/>`_ invece.
+
 .. toctree::
    :maxdepth: 4
 
